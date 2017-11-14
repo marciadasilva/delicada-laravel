@@ -15,14 +15,14 @@
 <link rel="stylesheet" href="{{ asset('css/delicada.css')}}" type="text/css">
 </head>
 
-<body>
+<body class="login-corpo">
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-7">
-        <img src="../img/pexels-photo-417074.jpeg" class="responsive-img" alt="Delicada-Mulher">
-      </div>
-      <div class="col-md-5">
+<div class="row">
+  <div class="col-md-5 img-login"></div>
+  <div class="col-md-7 formulario">
+
+    <div class="col-md-2"></div>
+      <div class="col-md-8 sign-up">
         <form>
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
@@ -41,9 +41,13 @@
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
-      </div>
     </div>
+  <div class="col-md-2"></div>
+
   </div>
+</div>
+
+
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
