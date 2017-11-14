@@ -2,5 +2,7 @@
 
 
 Route::get('/', function () {
-   return view('layouts.master');
+   return view('site.index');
 });
+
+Route::get('/login', 'LoginController@index');
