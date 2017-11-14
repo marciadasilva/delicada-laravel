@@ -1,0 +1,15 @@
+.center-div {
+ display: table;
+ width: 100%;
+ height: 100vh;
+}
+
+.center-div-child{
+ text-align: center;
+ display: table-cell;
+ vertical-align: middle;
+}
+
+.esconder-scroll {
+  overflow-y: hidden;
+}

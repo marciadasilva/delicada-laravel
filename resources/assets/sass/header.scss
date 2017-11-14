@@ -1,0 +1,16 @@
+*{
+  margin:0px;
+}
+
+.img-logo{
+  height: 50px;
+  width: 132px;
+  display: block; /* Por causa do span */
+  // tem que ver que o arquivo gerado vai estar na pasta
+  // public/css e a imagem está em public/img
+  // por isso precisa somente ../img para acessar a imagem
+  // aqui vai dar erro, mas no CSS gerado, vai funcionar certinho
+  background: url('../img/logo-menu.png') no-repeat;
+  background-size: contain; /* Mesmo tamanho definido na classe */
+  color: transparent; /* Importante deixar o texto para os leitores de tela */
+}
