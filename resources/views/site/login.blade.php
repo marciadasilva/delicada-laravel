@@ -27,25 +27,25 @@
       <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6" style="margin-top: 17vh;">
-          <form class="borda-form" action="" method="post">
+          <form class="borda-form fundo-form" action="" method="post">
           <div>
               <!--Header-->
               <div class="text-center">
-                <h3><i class="fa fa-lock"></i> Login</h3>
+                <h3 class="cor-roxo"><i class="fa fa-lock"></i> Login</h3>
                   <hr>
               </div>
 
               <!--Body-->
               <div class="form-group">
-                <i class="fa fa-envelope prefix grey-text"></i>
-                <label for="email">E-mail</label>
+                <i class="fa fa-envelope prefix grey-text cor-roxo"></i>
+                <label class="cor-roxo" for="email">E-mail</label>
                 <input type="email" id="email" class="form-control">
 
               </div>
 
               <div class="form-group">
-                <i class="fa fa-lock prefix"></i>
-                <label for="pass">Senha</label>
+                <i class="fa fa-lock prefix cor-roxo"></i>
+                <label class="cor-roxo" for="pass">Senha</label>
                 <input type="password" id="pass" class="form-control">
 
               </div>
@@ -58,7 +58,7 @@
               <!--Footer-->
               <div class="modal-footer">
                 <div class="">
-                  <p>Não possui uma conta?
+                  <p class="cor-roxo">Não possui uma conta?
                     <a href="#">Entre em contato</a>
                   </p>
                 </div>

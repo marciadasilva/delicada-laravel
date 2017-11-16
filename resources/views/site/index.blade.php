@@ -16,7 +16,7 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img class="first-slide" src="{{ asset('img/conjunto.jpeg') }}" alt="First slide">
+          <img class="first-slide" src="{{ asset('img/bag.jpeg') }}" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>Delicada Mulher Moda Feminina</h1>
