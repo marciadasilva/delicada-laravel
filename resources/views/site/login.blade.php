@@ -8,49 +8,68 @@
 <meta name="author" content="">
 <link rel="icon" href="{{ asset('favicon.ico')}}">
 
+
 <title>Login</title>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="{{ asset('css/carousel.css')}}" type="text/css">
 <link rel="stylesheet" href="{{ asset('css/delicada.css')}}" type="text/css">
+<link rel="stylesheet" href="{{ asset('css/login.css')}}" type="text/css">
+
+
 </head>
 
 <body class="login-corpo">
 
-<div class="row">
-  <div class="col-md-5 img-login"></div>
-  <div class="col-md-7 formulario">
 
-    <div class="col-md-2"></div>
-      <div class="col-md-8 sign-up">
-        <form>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6" style="margin-top: 17vh;">
+          <form class="borda-form" action="" method="post">
+          <div>
+              <!--Header-->
+              <div class="text-center">
+                <h3><i class="fa fa-lock"></i> Login</h3>
+                  <hr>
+              </div>
+
+              <!--Body-->
+              <div class="form-group">
+                <i class="fa fa-envelope prefix grey-text"></i>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" class="form-control">
+
+              </div>
+
+              <div class="form-group">
+                <i class="fa fa-lock prefix"></i>
+                <label for="pass">Senha</label>
+                <input type="password" id="pass" class="form-control">
+
+              </div>
+
+              <div class="text-center">
+                <button class="margin-bottom-15 btn btn-lg btn-info waves-effect waves-light">Entrar</button>
+              </div>
+            </div>
+
+              <!--Footer-->
+              <div class="modal-footer">
+                <div class="">
+                  <p>Não possui uma conta?
+                    <a href="#">Entre em contato</a>
+                  </p>
+                </div>
+              </div>
+
           </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-          </div>
-          <div class="form-check">
-            <label class="form-check-label">
-              <input type="checkbox" class="form-check-input">
-              Check me out
-            </label>
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+      </div>
+    </form>
+      <div class="col-md-3"></div>
     </div>
-  <div class="col-md-2"></div>
 
-  </div>
-</div>
-
-
-
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>

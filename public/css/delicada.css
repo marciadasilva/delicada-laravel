@@ -57,20 +57,19 @@ border-width:0;
   overflow-y:hidden;
 }
 
-.img-login {
-    text-align: right;
-    padding-top: 112px;
-    padding-right: 82px;
-    height: 100vh;
-    background: url("../img/pexels-photo-417074.jpeg") no-repeat right center;
-    background-size: cover;
+.borda-form {
+  padding: 70px;
+  box-shadow: 0px 0px 1em rgba(0, 0, 0, 0.5);
 }
 
-.formulario {
-  border: 1px solid red;
-  height: 100vh;
+h3 {
+  font-size: 40px;
 }
 
-.sign-up {
-  height: 100vh;
+input[type="email"], input[type="password"] {
+    font-size: 2em;
+}
+
+.margin-bottom-15 {
+  margin-bottom: 15px;
 }

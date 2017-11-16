@@ -42,3 +42,65 @@
 
 
 @endsection
+
+
+<div class="row">
+  <div class="col-md-5 img-login"></div>
+  <div class="col-md-7 formulario">
+
+    <div class="col-md-2"></div>
+      <div class="col-md-8 sign-up">
+        <!--Grid column-->
+               <div class="col-md-6 mb-r">
+
+                   <!--Form without header-->
+                   <div class="card">
+                       <div class="card-body">
+
+                           <!--Header-->
+                           <div class="text-center cyan-text">
+                               <h3>
+                                   <i class="fa fa-lock cyan-text"></i> Login:</h3>
+                               <hr class="my-4">
+                           </div>
+
+                           <!--Body-->
+                           <div class="md-form">
+                               <i class="fa fa-envelope prefix grey-text"></i>
+                               <input type="text" id="cyanForm-email" class="form-control">
+                               <label for="cyanForm-email">Your email</label>
+                           </div>
+
+                           <div class="md-form">
+                               <i class="fa fa-lock prefix grey-text"></i>
+                               <input type="password" id="cyanForm-pass" class="form-control">
+                               <label for="cyanForm-pass">Your password</label>
+                           </div>
+
+                           <div class="text-center">
+                               <button class="btn btn-info">Login</button>
+                           </div>
+
+                       </div>
+
+                       <!--Footer-->
+                       <div class="modal-footer">
+                           <div class="options">
+                               <p>Not a member?
+                                   <a href="#">Sign Up</a>
+                               </p>
+                               <p>Forgot
+                                   <a href="#">Password?</a>
+                               </p>
+                           </div>
+                       </div>
+
+                   </div>
+                   <!--/Form without header-->
+
+               </div>
+    </div>
+  <div class="col-md-2"></div>
+
+  </div>
+</div>
