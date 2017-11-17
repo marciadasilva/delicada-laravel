@@ -1,19 +1,19 @@
 <footer>
 
-    <div style="background-color: #6351ce;">
+    <div style="background: linear-gradient(to left, #834d9b, #d04ed6);">
         <div class="container">
             <div class="row py-4">
 
                 <div class="col-md-7">
-                    <p class="white-text">Visite-nos nas redes sociais</p>
+                    <p class="white-text font-size">Visite-nos nas redes sociais</p>
                 </div>
 
                 <div class="col-md-5">
-                    <a><i class="fa fa-facebook white-text"> </i></a>
-                    <a><i class="fa fa-twitter white-text"> </i></a>
-                    <a><i class="fa fa-google-plus white-text"> </i></a>
-                    <a><i class="fa fa-linkedin white-text"> </i></a>
-                    <a><i class="fa fa-instagram white-text"> </i></a>
+                    <a><i class="fa fa-facebook white-text font-size margin-left-right"> </i></a>
+                    <a><i class="fa fa-twitter white-text font-size margin-left-right"> </i></a>
+                    <a><i class="fa fa-google-plus white-text font-size margin-left-right"> </i></a>
+                    <a><i class="fa fa-linkedin white-text font-size margin-left-right"> </i></a>
+                    <a><i class="fa fa-instagram white-text font-size margin-left-right"> </i></a>
                 </div>
 
             </div>
@@ -21,48 +21,46 @@
     </div>
 
     <!--Footer Links-->
-    <div class="container mt-5 mb-4 text-center text-md-left">
-        <div class="row mt-3">
+    <div class="container-fluid white-text text-center" style="background-color: #212529">
+        <div class="row">
 
             <!--First column-->
-            <div class="col-md-3 col-lg-4 col-xl-3 mb-r">
-                <h6 class="title font-bold"><strong>Company name</strong></h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit
-                    amet, consectetur adipisicing elit.</p>
+            <div class="col-md-3">
+                <h6 class="title"><strong>Delicada Mulher</strong></h6>
+                <hr style="width: 60px; border-color: #d04ed6;">
+                <p>LOGO</p>
             </div>
             <!--/.First column-->
 
             <!--Second column-->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-r">
-                <h6 class="title font-bold"><strong>Products</strong></h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p><a href="#!">MDBootstrap</a></p>
-                <p><a href="#!">MDWordPress</a></p>
-                <p><a href="#!">BrandFlow</a></p>
-                <p><a href="#!">Bootstrap Angular</a></p>
+            <div class="col-md-2">
+                <h6 class="title font-bold"><strong>Categorias</strong></h6>
+                <hr style="width: 60px; border-color: #d04ed6;">
+                <p><a href="#">Blusas</a></p>
+                <p><a href="#">Calças</a></p>
+                <p><a href="#">Saias</a></p>
+                <p><a href="#">Vestidos</a></p>
             </div>
             <!--/.Second column-->
 
             <!--Third column-->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-r">
-                <h6 class="title font-bold"><strong>Useful links</strong></h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p><a href="#!">Your Account</a></p>
-                <p><a href="#!">Become an Affiliate</a></p>
-                <p><a href="#!">Shipping Rates</a></p>
-                <p><a href="#!">Help</a></p>
+            <div class="col-md-3">
+                <h6 class="title font-bold"><strong>Links Uteis</strong></h6>
+                <hr style="width: 60px; border-color: #d04ed6;">
+                <p><a href="#">Sobre</a></p>
+                <p><a href="#">Agende uma visita</a></p>
+                <p><a href="#">Novidades</a></p>
+                <p><a href="#">Ajuda</a></p>
             </div>
             <!--/.Third column-->
 
             <!--Fourth column-->
-            <div class="col-md-4 col-lg-3 col-xl-3">
-                <h6 class="title font-bold"><strong>Contact</strong></h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p><i class="fa fa-home mr-3"></i> New York, NY 10012, US</p>
-                <p><i class="fa fa-envelope mr-3"></i> info@example.com</p>
-                <p><i class="fa fa-phone mr-3"></i> + 01 234 567 88</p>
-                <p><i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
+            <div class="col-md-4">
+                <h6 class="title font-bold"><strong>Contato</strong></h6>
+                <hr style="width: 60px; border-color: #d04ed6;">
+                <p><i class="fa fa-home"></i> Ijuí, Rio Grande do Sul, BR</p>
+                <p><i class="fa fa-envelope"></i> marcia@admin.com</p>
+                <p><i class="fa fa-phone"></i> + 55 55 99999-9999</p>
             </div>
             <!--/.Fourth column-->
 
@@ -71,12 +69,11 @@
     <!--/.Footer Links-->
 
     <!-- Copyright-->
-    <div class="footer-copyright">
+    <div class="footer-copyright text-center" style="background-color: #14191e;">
         <div class="container-fluid">
-            © 2017 Copyright: <a href="https://www.MDBootstrap.com"><strong> MDBootstrap.com</strong></a>
+            © 2017 Copyright: <a href="#"><strong> Márcia da Silva</strong></a>
         </div>
     </div>
     <!--/.Copyright -->
 
 </footer>
-<!--/.Footer-->

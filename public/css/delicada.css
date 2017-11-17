@@ -94,10 +94,19 @@ input[type="email"], input[type="password"] {
 
 .white-text {
   color: #fff;
-  font-size: 2rem;
+}
+
+.font-size{
+font-size: 2rem;
 }
 
 .margin-left-right {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.title {
+margin-bottom: 1rem;
+font-weight: 500;
+font-size: 2rem;
 }
