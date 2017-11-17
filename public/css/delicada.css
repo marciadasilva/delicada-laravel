@@ -10,26 +10,13 @@
   color: #fff;
 }
 
-ul>li>a {
-  color: white;
-}
-
-ul>li>a:hover {
-  color: white;
-  color: #cecece;
-}
-
-.row>a {
-  color: white;
-}
-
 .cor-vermelho {
   background: #F44336;
   color: #fff;
 }
 
 .navbar-nav>li>a, .navbar-header>a {
- color: white;
+  color: white;
 }
 
 .navbar-nav>li>a:hover, .navbar-header>a:hover{
@@ -42,13 +29,12 @@ ul>li>a:hover {
 }
 
 .navbar {
--webkit-box-shadow: 0 8px 6px -6px #999;
--moz-box-shadow: 0 8px 6px -6px #999;
-box-shadow: 0 8px 6px -6px #999;
-/* the rest of your styling */
-border-width:0;
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 8px 6px -6px #999;
+  /* the rest of your styling */
+  border-width:0;
 }
-
 
 /* ------LOGIN------ */
 
@@ -77,8 +63,7 @@ h3 {
 }
 
 input[type="email"], input[type="password"] {
-    font-size: 1em;
-
+  font-size: 1em;
 }
 
 .margin-bottom-15 {
@@ -97,7 +82,7 @@ input[type="email"], input[type="password"] {
 }
 
 .font-size{
-font-size: 2rem;
+  font-size: 2rem;
 }
 
 .margin-left-right {
@@ -106,7 +91,16 @@ font-size: 2rem;
 }
 
 .title {
-margin-bottom: 1rem;
-font-weight: 500;
-font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: none;
 }
