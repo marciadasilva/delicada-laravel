@@ -4,33 +4,29 @@
 
 @section('content')
 
+<nav aria-label="breadcrumb" role="navigation" class="margin-top">
+  <ol class="breadcrumb breadcrumbs">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Produtos</a></li>
+    <li class="breadcrumb-item active"><a href="#">Blusas</a></li>
+  </ol>
+</nav>
+
 <div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-sm-4">
-            <div class="card">
-                <a class="img-card" href="http://www.fostrap.com/">
-                    <img src="--------- YOUR IMAGE URL ----------" />
-                </a>
-                <br />
-                <div class="card-content">
-                    <h4 class="card-title">
-                        <a href="http://www.fostrap.com/">
-                            Your title card
-                        </a>
-                    </h4>
-                    <div class="">
-                        Your description card
-                    </div>
-                </div>
-                <div class="card-read-more">
-                    <a class="btn btn-link btn-block" href="http://www.fostrap.com/">
-                        Read More
-                    </a>
-                </div>
-            </div>
+    <div class="row" style="width: 50rem;">
+      <div class="card cards">
+        <img class="card-img-top" src="/img/golden.jpeg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
+      </div>
     </div>
 </div>
+
+
+
 
 
 
