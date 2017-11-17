@@ -6,3 +6,7 @@ Route::get('/', function () {
 });
 
 Route::get('/login', 'LoginController@index');
+
+Route::get('/products', function(){
+  return view('site.produtos');
+});

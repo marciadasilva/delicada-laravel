@@ -2,19 +2,21 @@
 
     <div style="background: linear-gradient(to left, #834d9b, #d04ed6);">
         <div class="container">
-            <div class="row py-4">
+          <div class="row py-4">
 
-                <div class="col-md-7">
-                    <p class="white-text font-size">Visite-nos nas redes sociais</p>
-                </div>
+            <div class="col-md-7">
+              <p class="white-text font-size">Visite-nos nas redes sociais</p>
+            </div>
 
-                <div class="col-md-5">
-                    <a><i class="fa fa-facebook white-text font-size margin-left-right"> </i></a>
-                    <a><i class="fa fa-twitter white-text font-size margin-left-right"> </i></a>
-                    <a><i class="fa fa-google-plus white-text font-size margin-left-right"> </i></a>
-                    <a><i class="fa fa-linkedin white-text font-size margin-left-right"> </i></a>
-                    <a><i class="fa fa-instagram white-text font-size margin-left-right"> </i></a>
-                </div>
+            <div class="col-md-5 font-size white-text">
+              <a><i class="fa fa-facebook margin-left-right"> </i></a>
+              <a><i class="fa fa-twitter margin-left-right"> </i></a>
+              <a><i class="fa fa-google-plus margin-left-right"> </i></a>
+              <a><i class="fa fa-linkedin margin-left-right"> </i></a>
+              <a><i class="fa fa-instagram margin-left-right"> </i></a>
+            </div>
+
+            </div>
 
             </div>
         </div>
@@ -70,9 +72,9 @@
 
     <!-- Copyright-->
     <div class="footer-copyright text-center" style="background-color: #14191e;">
-        <div class="container-fluid">
-            © 2017 Copyright: <a href="#"><strong> Márcia da Silva</strong></a>
-        </div>
+      <div class="container-fluid py-4">
+          © 2017 Copyright: <a href="#"><strong> Márcia da Silva</strong></a>
+      </div>
     </div>
     <!--/.Copyright -->
 
