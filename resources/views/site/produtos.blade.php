@@ -15,7 +15,7 @@
 <div class="container">
     <div class="row">
       <div class="col-md-3 col-sm-4">
-        <div class="card">
+        <div class="single-product">
 
           <div class="size-card">
             <img class="size-img" src="/img/summer.jpeg" alt="Card image cap">
@@ -26,7 +26,10 @@
 
           <div class="shop-card">
             <span class="price-card">R$ 3535</span>
-            <a class="" href="#"><button class="btn btn-primary pull-right">Comprar</button></a>
+          </div>
+
+          <div class="shop-card">
+            <a class="" href="#"><button class="btn btn-primary">Comprar</button></a>
           </div>
 
         </div>
@@ -34,7 +37,7 @@
       </div>
 
       <div class="col-md-3 col-sm-4">
-        <div class="card">
+        <div class="single-product">
 
           <div class="size-card">
             <img class="size-img" src="/img/meme.png" alt="Card image cap">
@@ -52,7 +55,7 @@
       </div>
 
       <div class="col-md-3 col-sm-4">
-        <div class="card">
+        <div class="single-product">
 
           <div class="size-card">
             <img class="size-img" src="/img/summer.jpeg" alt="Card image cap">
@@ -70,7 +73,7 @@
       </div>
 
       <div class="col-md-3 col-sm-4">
-        <div class="card">
+        <div class="single-product">
 
           <div class="size-card">
             <img class="size-img" src="/img/meme.png" alt="Card image cap">
