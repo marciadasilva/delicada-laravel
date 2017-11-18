@@ -46,113 +46,120 @@
 
 
 <div class="container">
-    <div class="row">
+  <div class="row">
 
-      <div class="pull-right">
-        <strong>Ordenar por:</strong> <a href="#">Maior Preço</a> | <a href="#">Menor Preço</a> | <a href="#">Mais vendidos</a>
-      </div>
-      <hr>
+    <div class="pull-right">
+      <strong>Ordenar por:</strong> <a href="#">Maior Preço</a> | <a href="#">Menor Preço</a> | <a href="#">Mais vendidos</a>
+    </div>
+    <hr>
 
-      <div class="col-md-3 col-sm-4">
-        <div class="single-product">
+    <div class="col-md-3 col-sm-4">
+      <div class="single-product">
 
-          <div class="size-card">
-            <img class="size-img" src="/img/summer.jpeg" alt="Card image cap">
-
-          </div>
-
-          <h2><a href="#">Nome do Produto</a></h2>
-
-          <div class="shop-card">
-            <span class="price-card">R$ 3535</span>
-          </div>
-
-          <div class="shop-card">
-            <a class="" href="#"><button class="btn btn-primary">Comprar</button></a>
-          </div>
+        <div class="size-card">
+          <img class="size-img" src="/img/summer.jpeg" alt="Card image cap">
 
         </div>
 
-      </div>
+        <h2><a href="#">Nome do Produto</a></h2>
 
-      <div class="col-md-3 col-sm-4">
-        <div class="single-product">
-
-          <div class="size-card">
-            <img class="size-img" src="/img/meme.png" alt="Card image cap">
-          </div>
-
-          <h2><a href="#">Nome do Produto</a></h2>
-
-          <div class="shop-card">
-            <span class="price-card">R$ 3535</span>
-            <a class="" href="#"><button class="btn btn-primary pull-right">Comprar</button></a>
-          </div>
-
+        <div class="shop-card">
+          <span class="price-card">R$ 3535</span>
         </div>
 
-      </div>
-
-      <div class="col-md-3 col-sm-4">
-        <div class="single-product">
-
-          <div class="size-card">
-            <img class="size-img" src="/img/summer.jpeg" alt="Card image cap">
-          </div>
-
-          <h2><a href="#">Nome do Produto</a></h2>
-
-          <div class="shop-card">
-            <span class="price-card">R$ 3535</span>
-            <a class="" href="#"><button class="btn btn-primary pull-right">Comprar</button></a>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="col-md-3 col-sm-4">
-        <div class="single-product">
-
-          <div class="size-card">
-            <img class="size-img" src="/img/meme.png" alt="Card image cap">
-          </div>
-
-          <h2><a href="#">Nome do Produto</a></h2>
-
-          <div class="shop-card">
-            <span class="price-card">R$ 3535</span>
-            <a class="" href="#"><button class="btn btn-primary pull-right">Comprar</button></a>
-          </div>
-
+        <div class="shop-card">
+          <a class="" href="#"><button class="btn btn-primary">Comprar</button></a>
         </div>
 
       </div>
 
     </div>
+
+    <div class="col-md-3 col-sm-4">
+      <div class="single-product">
+
+        <div class="size-card">
+          <img class="size-img" src="/img/meme.png" alt="Card image cap">
+        </div>
+
+        <h2><a href="#">Nome do Produto</a></h2>
+
+        <div class="shop-card">
+          <span class="price-card">R$ 3535</span>
+          <a class="" href="#"><button class="btn btn-primary pull-right">Comprar</button></a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="col-md-3 col-sm-4">
+      <div class="single-product">
+
+        <div class="size-card">
+          <img class="size-img" src="/img/summer.jpeg" alt="Card image cap">
+        </div>
+
+        <h2><a href="#">Nome do Produto</a></h2>
+
+        <div class="shop-card">
+          <span class="price-card">R$ 3535</span>
+          <a class="" href="#"><button class="btn btn-primary pull-right">Comprar</button></a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="col-md-3 col-sm-4">
+      <div class="single-product">
+
+        <div class="size-card">
+          <img class="size-img" src="/img/meme.png" alt="Card image cap">
+        </div>
+
+        <h2><a href="#">Nome do Produto</a></h2>
+
+        <div class="shop-card">
+          <span class="price-card">R$ 3535</span>
+          <a class="" href="#"><button class="btn btn-primary pull-right">Comprar</button></a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 </div>
 
 <div class="container">
-  <nav aria-label="Page navigation example">
-    <ul class="pagination justify-content-center">
-      <li class="page-item">
-        <a class="page-link" href="#" aria-label="Previous">
-          <span aria-hidden="true">&laquo;</span>
-          <span class="sr-only">Previous</span>
-        </a>
-      </li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
-      <li class="page-item"><a class="page-link" href="#">2</a></li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item">
-        <a class="page-link" href="#" aria-label="Next">
-          <span aria-hidden="true">&raquo;</span>
-          <span class="sr-only">Next</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
+  <div class="row">
+      <div class="col-md-12 col-md-offset-5 col-lg-offset-5 col-sm-offset-5 col-xs-offset-5">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+  </div>
 </div>
+
+</div>
+
 
 
 
