@@ -127,6 +127,16 @@ footer a:hover {
   height: 150px;
 }
 
+.price-card{
+  font-size: 1.5em;
+}
+
+.card h2{
+  font-size: 2em;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
 /* -- breadcrumbs --*/
 
 .margin-top{

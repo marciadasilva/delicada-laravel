@@ -14,7 +14,7 @@
 
 <div class="container">
     <div class="row">
-      <div class="col-md-3 col-sm-6">
+      <div class="col-md-3 col-sm-4">
         <div class="card">
 
           <div class="size-card">
@@ -24,20 +24,16 @@
 
           <h2><a href="#">Nome do Produto</a></h2>
 
-          <div class="price-card">
-            <ins>R$ 3535</ins>
-          </div>
-
           <div class="shop-card">
-            <a class="" data-quantity="1" data-product_sku=""
-               data-product_id="70" rel="nofollow" href="#">Comprar</a>
+            <span class="price-card">R$ 3535</span>
+            <a class="" href="#"><button class="btn btn-primary pull-right">Comprar</button></a>
           </div>
 
         </div>
 
       </div>
 
-      <div class="col-md-3 col-sm-6">
+      <div class="col-md-3 col-sm-4">
         <div class="card">
 
           <div class="size-card">
@@ -46,20 +42,16 @@
 
           <h2><a href="#">Nome do Produto</a></h2>
 
-          <div class="price-card">
-            <ins>R$ 3535</ins>
-          </div>
-
           <div class="shop-card">
-            <a class="" data-quantity="1" data-product_sku=""
-               data-product_id="70" rel="nofollow" href="#">Comprar</a>
+            <span class="price-card">R$ 3535</span>
+            <a class="" href="#"><button class="btn btn-primary pull-right">Comprar</button></a>
           </div>
 
         </div>
 
       </div>
 
-      <div class="col-md-3 col-sm-6">
+      <div class="col-md-3 col-sm-4">
         <div class="card">
 
           <div class="size-card">
@@ -68,20 +60,16 @@
 
           <h2><a href="#">Nome do Produto</a></h2>
 
-          <div class="price-card">
-            <ins>R$ 3535</ins>
-          </div>
-
           <div class="shop-card">
-            <a class="" data-quantity="1" data-product_sku=""
-               data-product_id="70" rel="nofollow" href="#">Comprar</a>
+            <span class="price-card">R$ 3535</span>
+            <a class="" href="#"><button class="btn btn-primary pull-right">Comprar</button></a>
           </div>
 
         </div>
 
       </div>
 
-      <div class="col-md-3 col-sm-6">
+      <div class="col-md-3 col-sm-4">
         <div class="card">
 
           <div class="size-card">
@@ -90,13 +78,9 @@
 
           <h2><a href="#">Nome do Produto</a></h2>
 
-          <div class="price-card">
-            <ins>R$ 3535</ins>
-          </div>
-
           <div class="shop-card">
-            <a class="" data-quantity="1" data-product_sku=""
-               data-product_id="70" rel="nofollow" href="#">Comprar</a>
+            <span class="price-card">R$ 3535</span>
+            <a class="" href="#"><button class="btn btn-primary pull-right">Comprar</button></a>
           </div>
 
         </div>
