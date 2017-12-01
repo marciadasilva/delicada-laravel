@@ -11,26 +11,57 @@
 
     <title>@yield('title')</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{ asset('css/carousel.css')}}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('css/delicada.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/app.css')}}" type="text/css">
   </head>
 
 <!-- NAVBAR
 ================================================== -->
   <body>
-    @include('layouts.header')
 
-    @yield('content')
+    <div class="main-grid">
 
-    @include('layouts.footer')
+      @include('layouts.header')
 
+      <div class="content">
+        @yield('content')
+      </div>
+
+      @include('layouts.footer')
+
+    </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-    <script src="{{ asset('js/efeitos.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <script src="{{ asset('js/app.js')}}"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.carousel.carousel-slider').carousel();
+            autoplay()
+            function autoplay() {
+                $('.carousel').carousel('next');
+                setTimeout(autoplay, 4500);
+            }
+
+            $('select').material_select();
+        });
+
+         $(function(){
+             $(".button-collapse").sideNav();
+         });
+    </script>
+
   </body>
 </html>

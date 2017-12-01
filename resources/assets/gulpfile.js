@@ -8,14 +8,14 @@ gulp.task('default',['sass','js','watch']);
 
 gulp.task('sass', function () {
     return gulp.src('sass/**/*.scss')
-        .pipe(concat('delicada.min.css'))
+        .pipe(concat('app.css'))
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(gulp.dest('../../public/css'));
 });
 
 gulp.task('js', function() {
     return gulp.src('js/**/*.js')
-        .pipe(concat('efeitos.min.js'))
+        .pipe(concat('app.js'))
         .pipe(uglify())
         .pipe(gulp.dest('../../public/js'));
 });

@@ -1,0 +1,29 @@
+$color_nav: #BA68C8;
+
+/* Brand logo center */
+.logo {
+  display: inline-block;
+  height: 100%;
+}
+
+/* Transparent Navbar */
+.navbar-fixed{
+  position: absolute;
+  z-index:999999999;
+}
+
+.navbar {
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 8px 6px -6px #999;
+  border-width:0;
+}
+
+nav ul a:hover{
+  color: $color_nav;
+  background: white;
+}
+
+.cor-menu {
+  background: linear-gradient(to right, $color_nav, #AB47BC);
+}

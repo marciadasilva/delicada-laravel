@@ -1,0 +1,70 @@
+#slider, .wrap, .slide-content{
+  width: 100%;
+  height: 100vh;
+}
+
+.wrap{position: relative;}
+
+.slide{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slide1{background-image: url('../img/bag.jpeg');}
+.slide2{background-image: url('../img/entrega.jpeg');}
+.slide3{background-image: url('../img/banner.jpeg');}
+
+/*faz o texto ficar sempre no centro da tela*/
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  p{
+    padding-top: 20px;
+  }
+}
+
+.slide-content span{
+  font-size: 4rem;
+  color: white;
+}
+
+.arrow{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -35px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+#arrow-left{
+  border-width: 30px 40px 30px 0;
+  border-color: transparent #fff transparent transparent;
+  left: 0;
+  margin-left: 30px;
+}
+
+#arrow-right{
+  border-width: 30px 0px 30px 40px;
+  border-color: transparent transparent transparent #fff;
+  right: 0;
+  margin-right: 30px;
+}
+
+@media(max-width:700px){
+
+  .slide-content span{
+    font-size: 1.5rem;
+  }
+
+  .slide-content h1{
+    font-size: 3rem;
+  }
+
+}

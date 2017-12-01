@@ -1,0 +1,70 @@
+.login-grid{
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 3fr 1fr;
+  grid-template-areas:
+          " . img-login . form-login . ";
+}
+
+.img-login{
+  grid-area: img-login;
+  background-image: url('../img/login.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vh;
+}
+
+.form-login{
+  grid-area: form-login;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 100vh;
+  width: 100vh;
+  margin: 0 20px;
+}
+
+@media(max-width:700px){
+  .login-grid{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas:
+            " . img-login . "
+            " . form-login . ";
+  }
+
+}
+
+/*.login-corpo {
+  overflow-x:hidden;
+  overflow-y:hidden;
+  background-color: #202026;
+  background-image: url("https://www.transparenttextures.com/patterns/skulls.png");
+}
+
+.borda-form {
+  padding: 70px;
+  box-shadow: 0px 0px 2em rgba(255, 255, 255, 0.9);
+}
+
+h3 {
+  font-size: 40px;
+}
+
+.cor-roxo {
+  color: #8C9EFF;
+}
+
+.fundo-form {
+  background-color: #fff;
+}
+
+input[type="email"], input[type="password"] {
+  font-size: 1em;
+}
+
+.margin-bottom-15 {
+  margin-bottom: 15px;
+}*/

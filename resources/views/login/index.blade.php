@@ -1,4 +1,4 @@
-@extends('layout.login')
+@extends('layouts.login')
 
 @section('titulo', 'Login')
 
@@ -13,11 +13,11 @@
     <div class="col s1"></div>
     <div class="col s5 center-div">
         <div class="container center-div-child">
-            <p class="right-align ">Não possui uma conta? <a href="{{route('site.login.cadastro')}}" class="teal-text">Cadastre-se</a></p>
+            <p class="right-align ">Não possui uma conta? <a href="" class="teal-text">Cadastre-se</a></p>
             <h3 class="center teal-text">Entrar no sistema</h3>
             <p class="center">Digite seus dados abaixo:</p>
             <div class="row">
-                <form class="" action="{{route('user.orders')}}" method="post">
+                <form class="" action="" method="post">
                     {{csrf_field()}}
 
                     <div class="input-field">

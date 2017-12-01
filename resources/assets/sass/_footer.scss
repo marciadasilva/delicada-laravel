@@ -1,0 +1,84 @@
+footer .social-info {
+  grid-area: social-info;
+
+  background: linear-gradient(to left, #834d9b, #d04ed6);
+  font-size: 2rem;
+  color: #fff;
+  align-items: center;
+  justify-items: center;
+
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+footer .company-info {
+  grid-area: company-info;
+
+  background-color: #212529;
+  text-align: center;
+  color: #fff;
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr 1fr;
+  padding: 10px;
+
+  hr{
+    width: 60px;
+    border-color: #d04ed6;
+  }
+
+  h6{
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+}
+
+footer .copyright-info {
+  grid-area: copyright-info;
+  background-color: #14191e;
+  text-align: center;
+  padding: 10px;
+}
+
+footer .margin-left-right {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+@media(max-width:700px){
+
+  footer .margin-left-right {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  footer .company-info {
+    grid-area: company-info;
+
+    background-color: #212529;
+    text-align: center;
+    color: #fff;
+    display:grid;
+    grid-template-columns:1fr;
+    padding: 10px;
+
+    hr{
+      width: 30px;
+      border-color: #d04ed6;
+    }
+
+    h6{
+      margin-bottom: 1rem;
+    }
+  }
+
+}

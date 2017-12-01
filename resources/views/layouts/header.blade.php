@@ -1,23 +1,35 @@
 <header>
-  <nav id="nav" class="navbar navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarCollapse" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a href="#"> <img class="img-responsive" src="{{ asset('img/logo.png') }}" alt="DM"> </a>
-      </div>
-      <div id="navbarCollapse" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#feminino">Feminino</a></li>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#contact">Contato</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <div class="navbar-fixed">
+      <nav id="nav" class="transparent z-depth-0 navbar">
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="/" class="brand-logo"><img class="img-responsive logo" src="{{ asset('img/logo.png') }}" alt="DM"></a>
+            <a href="" data-activates="menu-mobile" class="button-collapse">
+              <i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="/">Home</a></li>
+              <li><a href="/">Feminino</a></li>
+              <li><a href="/">Sobre</a></li>
+              <li><a href="/">Contato</a></li>
+              @if(Auth::check())
+                <li><a href="/users">{{Auth::user()->name}}</a></li>
+              @else
+                <li><a href="/login">Login</a></li>
+              @endif
+            </ul>
+            <ul class="side-nav" id="menu-mobile">
+              <li><a href="/">Home</a></li>
+              <li><a href="/">Feminino</a></li>
+              <li><a href="/">Sobre</a></li>
+              <li><a href="/">Contato</a></li>
+              @if(Auth::check())
+                <li><a href="/">{{Auth::user()->name}}</a></li>
+              @else
+                <li><a href="/login">Login</a></li>
+              @endif
+            </ul>
+          </div>
+        </div>
+      </nav>
+  </div>
 </header>
