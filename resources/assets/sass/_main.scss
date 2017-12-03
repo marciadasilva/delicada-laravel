@@ -1,3 +1,6 @@
+$main_color: #BA68C8;
+$main_color_rgba: rgba(186, 104, 200, .6);
+
 *{
   box-sizing: border-box;
   /*margin: 0;*/
@@ -11,6 +14,12 @@ body{
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
+  line-height: 1.5;
+}
+
+p{
+  margin: 0;
+  padding: 1em 0;
 }
 
 .main-grid{
@@ -20,6 +29,7 @@ body{
           "header"
           "content"
           "footer";
+  background: #f5f5f5;
 }
 
 .main-grid header{
@@ -41,18 +51,13 @@ body{
           "copyright-info";
 }
 
-.cor-vermelho {
-  background: #F44336;
-  color: #fff;
-}
-
 .index{
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
           "carousel-index"
+          "description-index"
           "category-index"
-          "hr-index"
           "thumbnail-index";
 }
 
@@ -64,23 +69,49 @@ body{
   grid-area: category-index;
 
   display:grid;
-  grid-template-columns:1fr 1fr 1fr 1fr;
+  grid-template-columns:1fr 2fr 2fr 2fr 1fr;
+  grid-template-areas:
+          " . blusas saias calcas . ";
   text-align: center;
   padding: 40px;
+  grid-gap: 2em;
+  background: #383838;
+
 
   h2{
     font-size: 3rem;
   }
 }
 
-.index .category-index img{
-  border-radius: 50%;
-  width:140px;
-  height:140px;
+.index .category-index .blusas{
+  grid-area: blusas;
 }
 
-.index .hr-index{
-  grid-area: hr-index;
+.index .category-index .saias{
+  grid-area: saias;
+}
+
+.index .category-index .calcas{
+  grid-area: calcas;
+}
+
+.index .category-index img{
+  width:100%;
+  height:55vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.index .description-index{
+  grid-area: description-index;
+  text-align: center;
+
+  p{
+    font-size: 1.3em;
+    columns: 2;
+    margin: auto 10em;
+  }
 }
 
 .index .thumbnail-index{
@@ -108,10 +139,10 @@ body{
   height:340px;
 }
 
-.login-grid {
+/*.login-grid {
   display:grid;
   grid-template-columns:1fr;
-}
+}*/
 
 /* User Page */
 .user-grid{
@@ -141,10 +172,71 @@ body{
   }
 }
 
+
 .main-info .product-card{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap:1em;
+}
+
+/* Products client */
+.products-grid{
+  nav{
+    //64px on @media
+    margin-top: 55px;
+    background-color: #4a4a4a;
+  }
+
+  .filter{
+    color: $main_color;
+    text-align: center;
+    background-color: white;
+    padding: 1px;
+
+    h3{
+      font-size: 2em;
+    }
+
+    h4{
+      font-size: 1.5em;
+    }
+    
+    ul{
+
+      border: 1px solid rgba(243,229,245,.7);
+
+      li{
+        display: inline-block;
+        padding: 5px 10px;
+
+        a{
+          text-decoration: none;
+          color: #4a4a4a;
+          padding: inherit;
+
+          &:hover {
+            color: white;
+          }
+        }
+
+        &:hover {
+          background-color: $main_color;
+        }
+      }
+    }
+
+    label{
+
+      padding-left: 15px;
+      a{
+        text-decoration: none;
+        color: #4a4a4a;
+        padding: 0 5px;
+      }
+    }
+
+
+  }
 }
 
 

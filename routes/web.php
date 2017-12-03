@@ -2,6 +2,11 @@
 
 
 Route::get('/', function () { return view('site.index'); })->name('home');
+Route::get('/produtos', function () {
+    $products = \App\Product::latest()->get();
+    return view('products.index', compact('products'));
+
+});
 
 // Register Routes
 Route::get('/register', 'RegistrationController@create');

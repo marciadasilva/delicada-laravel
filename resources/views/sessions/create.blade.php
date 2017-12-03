@@ -4,21 +4,19 @@
 
 @section('content')
 
-    <h3 class="cyan-text"><i class="fa fa-lock cyan-text"></i> Login </h3>
+    <h3><i class="fa fa-lock"></i> Login </h3>
 
     <form action="/login" method="post">
         {{csrf_field()}}
 
-        <div class="form-group">
-            <i class="fa fa-envelope prefix grey-text"></i>
-            <label for="email">Email</label>
-            <input type="email" class="form-control" name="email" id="email" required>
+        <div class="input-field">
+            <input id="email" type="email" name="email">
+            <label for="email">Digite seu email</label>
         </div>
 
-        <div class="form-group">
-            <i class="fa fa-lock prefix grey-text"></i>
-            <label for="password">Password</label>
-            <input type="password" class="form-control" name="password" id="password" required>
+        <div class="input-field">
+            <input id="password" type="password" name="password">
+            <label for="password">Digite sua senha</label>
         </div>
 
         <div class="form-group">

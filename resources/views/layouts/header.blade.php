@@ -8,7 +8,7 @@
               <i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
               <li><a href="/">Home</a></li>
-              <li><a href="/">Feminino</a></li>
+              <li><a href="/produtos">Feminino</a></li>
               <li><a href="/">Sobre</a></li>
               <li><a href="/">Contato</a></li>
               @if(Auth::check())
@@ -19,7 +19,7 @@
             </ul>
             <ul class="side-nav" id="menu-mobile">
               <li><a href="/">Home</a></li>
-              <li><a href="/">Feminino</a></li>
+              <li><a href="/produtos">Feminino</a></li>
               <li><a href="/">Sobre</a></li>
               <li><a href="/">Contato</a></li>
               @if(Auth::check())
