@@ -1,0 +1,132 @@
+$main_color: #BA68C8;
+$main_color_rgba: rgba(186, 104, 200, .6);
+$background_color: #383838;
+
+/* Carousel */
+
+#slide1{
+  background-image: url('../img/bag.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#slide2{
+  background-image: url('../img/entrega.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#slide3{
+  background-image: url('../img/banner.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.carousel.carousel-slider .carousel-item h2{
+  padding-top: 7.3em;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+/* Description section */
+
+#description-index{
+  text-align: center;
+
+  p{
+    font-size: 1.3em;
+    text-align: justify;
+    margin: 1em;
+  }
+
+}
+
+/* Category section */
+
+#category-index{
+  text-align: center;
+  padding: 40px;
+  grid-gap: 2em;
+  background: $background_color;
+
+  h2{
+    font-size: 3rem;
+  }
+
+}
+
+/* Thumbnail section */
+
+#thumbnail-index{
+  h2{
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:540px;
+    height:340px;
+  }
+}
+
+
+/* ###################################################### */
+/*                        Large screen                    */
+/* ###################################################### */
+@media(min-width:700px){
+
+  /* Carousel */
+
+  .carousel{
+    height: 100vh;
+  }
+
+  .carousel.carousel-slider .carousel-item h2{
+    padding-top: 9em;
+    font-size: 3em;
+  }
+
+  /* Description section */
+
+  #description-index{
+    text-align: center;
+
+    p{
+      font-size: 1.3em;
+      columns: 2;
+      margin: auto 10em;
+    }
+
+  }
+
+  /* Category section */
+
+  #category-index{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    img{
+      width:100%;
+      height:55vh;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  /* Thumbnail section */
+
+  #thumbnail-index{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5em 5em;
+
+  }
+}

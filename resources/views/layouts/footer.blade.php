@@ -1,9 +1,7 @@
 <footer>
 
-    <div class="social-info">
-        <div>
-          <p>Visite-nos nas redes sociais</p>
-        </div>
+    <section id="social-info">
+        <p>Visite-nos nas redes sociais</p>
 
         <div>
           <a><i class="fa fa-facebook margin-left-right"> </i></a>
@@ -12,10 +10,9 @@
           <a><i class="fa fa-linkedin margin-left-right"> </i></a>
           <a><i class="fa fa-instagram margin-left-right"> </i></a>
         </div>
-    </div>
+    </section>
 
-    <!--Footer Links-->
-    <div class="company-info">
+    <section id="company-info">
         <div>
             <h6>Delicada Mulher</h6>
             <hr>
@@ -44,7 +41,7 @@
             <p><i class="fa fa-envelope"></i> marcia@admin.com</p>
             <p><i class="fa fa-phone"></i> + 55 55 99999-9999</p>
         </div>
-    </div>
+    </section>
 
     <div class="copyright-info">
           © 2017 Copyright: <a href="#"><strong> Márcia da Silva</strong></a>

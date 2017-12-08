@@ -1,25 +1,32 @@
-footer .social-info {
-  grid-area: social-info;
+$background_color: #383838;
+$main_color: #BA68C8;
 
-  background: linear-gradient(to left, #834d9b, #d04ed6);
+/* Social info Section */
+
+#social-info{
   font-size: 2rem;
   color: #fff;
-  align-items: center;
-  justify-items: center;
+  background: $main_color;
+  text-align: center;
 
-  display:grid;
-  grid-template-columns: 1fr 1fr;
+  p{
+    padding-top: 1em;
+  }
+
+  div{
+    padding-bottom: 1em;
+  }
 }
 
-footer .company-info {
-  grid-area: company-info;
+/* Company info Section */
 
+#company-info{
   background-color: #212529;
   text-align: center;
   color: #fff;
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr 1fr;
   padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
   hr{
     width: 60px;
@@ -33,52 +40,57 @@ footer .company-info {
   }
 }
 
-footer .copyright-info {
-  grid-area: copyright-info;
-  background-color: #14191e;
-  text-align: center;
-  padding: 10px;
-}
+/* Footer */
 
-footer .margin-left-right {
-  margin-left: 25px;
-  margin-right: 25px;
-}
+footer {
 
-footer a {
-  color: white;
-}
-
-footer a:hover {
-  color: white;
-  text-decoration: none;
-}
-
-@media(max-width:700px){
-
-  footer .margin-left-right {
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-
-  footer .company-info {
-    grid-area: company-info;
-
-    background-color: #212529;
+  .copyright-info {
+    background-color: #14191e;
     text-align: center;
-    color: #fff;
-    display:grid;
-    grid-template-columns:1fr;
     padding: 10px;
+  }
 
-    hr{
-      width: 30px;
-      border-color: #d04ed6;
+  .margin-left-right {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  a {
+    color: white;
+
+    &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/* ###################################################### */
+/*                        Large screen                    */
+/* ###################################################### */
+@media(min-width:700px){
+
+  /* Social info Section */
+
+  #social-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    p{
+      padding-top: 0;
     }
 
-    h6{
-      margin-bottom: 1rem;
+    div{
+      padding-bottom: 0;
     }
   }
 
+  /* Company info Section */
+
+  #company-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  }
+}
 }

@@ -3,16 +3,16 @@ jQuery(document).ready(function($) {
 
     // Código para que apenas a página inicial fique sem a cor de fundo da barra de menu
     if(!url_atual.endsWith("/")){
-        $("#nav").addClass("cor-menu");
+        $("#nav").addClass("nav-color");
     }
 
     var $w = $(window);
 
     $w.on("scroll", function () {
         if (($w.scrollTop() < 50 ) && (url_atual.endsWith("/"))) {
-            $("#nav").removeClass("cor-menu");
+            $("#nav").removeClass("nav-color");
         } else if ($w.scrollTop() > 50) {
-            $("#nav").addClass("cor-menu");
+            $("#nav").addClass("nav-color");
         }
     });
 

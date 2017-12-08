@@ -1,10 +1,5 @@
-$color_nav: #BA68C8;
-
-/* Brand logo center */
-.logo {
-  display: inline-block;
-  height: 100%;
-}
+$main_color: #BA68C8;
+$main_color_rgba: rgba(186, 104, 200, .6);
 
 /* Transparent Navbar */
 .navbar-fixed{
@@ -20,10 +15,10 @@ $color_nav: #BA68C8;
 }
 
 nav ul a:hover{
-  color: $color_nav;
+  color: $main_color;
   background: white;
 }
 
-.cor-menu {
-  background: linear-gradient(to right, $color_nav, #AB47BC);
+.nav-color {
+  background: linear-gradient(to right, $main_color, #AB47BC);
 }

@@ -27,7 +27,8 @@
 <div class="form-group">
     <label for="name">Preço</label>
     <input type="text" class="form-control" name="price" id="price"
-           value="{{isset($product->price)? $product->price : ''}}" required>
+           value="{{isset($product->price)? $product->price : ''}}"
+                    required>
 </div>
 
 <div class="form-group">
