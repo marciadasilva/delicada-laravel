@@ -33,20 +33,20 @@
     <script src="{{ asset('js/app.js')}}"></script>
 
     <script>
-        {{--$(document).ready(function(){--}}
-            {{--$('.carousel.carousel-slider').carousel();--}}
-            {{--autoplay()--}}
-            {{--function autoplay() {--}}
-                {{--$('.carousel').carousel('next');--}}
-                {{--setTimeout(autoplay, 4500);--}}
-            {{--}--}}
+        $(document).ready(function(){
+            $('.carousel.carousel-slider').carousel();
+            autoplay()
+            function autoplay() {
+                $('.carousel').carousel('next');
+                setTimeout(autoplay, 4500);
+            }
 
-            {{--$('select').material_select();--}}
-        {{--});--}}
+            $('select').material_select();
+        });
 
          $(function(){
              $(".button-collapse").sideNav();
-             $('.carousel.carousel-slider').carousel({fullWidth: true});
+//             $('.carousel.carousel-slider').carousel({fullWidth: true});
          });
     </script>
 
