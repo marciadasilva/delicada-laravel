@@ -19,12 +19,13 @@
             <p>LOGO</p>
         </div>
         <div>
-            <h6>Categorias</h6>
+            <h6><a href="/categories">Categorias</a></h6>
             <hr>
-            <p><a href="#">Blusas</a></p>
-            <p><a href="#">Calças</a></p>
-            <p><a href="#">Saias</a></p>
-            <p><a href="#">Vestidos</a></p>
+            {{-- <span> para não mostrar retorno em json --}}
+            <span style="display: none">{{$categories = \App\Category::latest()->get()}}</span>
+            @foreach($categories as $category)
+                <p><a href="/categories/{{$category->id}}">{{$category->name}}</a></p>
+            @endforeach
         </div>
         <div>
             <h6>Links Uteis</h6>

@@ -10,5 +10,7 @@
     @endif
         <a href="/categories"><li class="collection-item"> Categories</li></a>
         <a href="/users">     <li class="collection-item"> Users     </li></a>
-        <a href="/logout"><li class="collection-item">     Logout    </li></a>
+        <a onclick="return confirm('Você tem certeza que deseja sair da administração do site?');"
+           href="/logout"><li class="collection-item">     Logout    </li>
+        </a>
 </ul>

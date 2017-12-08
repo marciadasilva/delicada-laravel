@@ -3,7 +3,9 @@
         <nav id="nav" class="transparent z-depth-0 navbar">
             <div class="container">
                 <div class="nav-wrapper">
-                    <a href="/" class="brand-logo"><img class="img-responsive logo" src="{{ asset('img/logo.png') }}" alt="DM"></a>
+                    <a href="/">
+                        <img class="img-responsive" src="{{ asset('img/logo.png') }}" alt="DM">
+                    </a>
                     <a href="" data-activates="menu-mobile" class="button-collapse">
                     <i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">

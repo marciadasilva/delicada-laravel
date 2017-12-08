@@ -17,7 +17,9 @@
 
                 <div class="form-group">
                     <br>
-                    <button type="submit" class="btn waves-effect white grey-text darken-text-2">Salvar</button>
+                    <button type="submit" class="btn waves-effect white grey-text darken-text-2">
+                        Salvar
+                    </button>
                 </div>
 
                 @include('layouts.errors')

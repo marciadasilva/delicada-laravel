@@ -4,21 +4,33 @@
 
 @section('content')
 
-    <div class="carousel carousel-slider center" data-indicators="true">
-        <div class="carousel-item white-text" href="" id="slide1">
-            <h2>Delicada Mulher Moda Feminina</h2>
-            <p class="white-text">Novidades todo Mês</p>
-            <a class="btn waves-effect white grey-text darken-text-2">Confira o Estoque</a>
+    <div class="wrap">
+        <div id="arrow-left" class="arrow"></div>
+        <div id="slider">
+            <div class="slide slide1">
+                <div class="slide-content">
+                    <h1>Delicada Mulher Moda Feminina</h1>
+                    <span>Novidades todo Mês</span>
+                    <a href="#" role="button">Confira o Estoque</a>
+                </div>
+            </div>
+
+            <div class="slide slide2">
+                <div class="slide-content">
+                    <h1>Entregas a Domicilio</h1>
+                    <span>Entre em contato para agendar uma visita</span>
+                    <a href="#" role="button">Veja Mais</a>
+                </div>
+            </div>
+
+            <div class="slide slide3">
+                <div class="slide-content">
+                    <h1>Delicada Mulher</h1>
+                    <a href="#" role="button">Agente uma Visita</a>
+                </div>
+            </div>
         </div>
-        <div class="carousel-item white-text" href="" id="slide2">
-            <h2>Entregas a Domicilio</h2>
-            <p class="white-text">Entre em contato para agendar uma visita</p>
-            <a class="btn waves-effect white grey-text darken-text-2">Veja Mais</a>
-        </div>
-        <div class="carousel-item white-text" href="" id="slide3">
-            <h2>Delicada Mulher</h2>
-            <a class="btn waves-effect white grey-text darken-text-2">Agente uma Visita</a>
-        </div>
+        <div id="arrow-right" class="arrow"></div>
     </div>
 
     <section id="description-index">

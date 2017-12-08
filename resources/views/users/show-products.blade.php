@@ -35,9 +35,11 @@
                 @endforeach
             </div>
             <br>
-            <button type="submit" class="btn waves-effect white grey-text darken-text-2"><a href='/product/create'>
-                    <i class="material-icons">open_in_new</i> Novo Produto</a></button>
-
+            <form action="/product/create" method="get">
+                <button type="submit" class="btn waves-effect white grey-text darken-text-2">
+                        Adicionar Produto
+                </button>
+            </form>
         </div>
     </section>
 

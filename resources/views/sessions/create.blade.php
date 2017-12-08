@@ -7,7 +7,7 @@
     <section class="login">
 
         <div class="card-form">
-            <h3><i class="fa fa-lock"></i> Login </h3>
+            <h3 class="cyan-text"><i class="fa fa-lock"></i> Login </h3>
 
             <form action="/login" method="post">
                 {{csrf_field()}}

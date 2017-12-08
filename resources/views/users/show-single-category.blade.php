@@ -12,9 +12,18 @@
 
         <div class="admin-main">
             <h3>{{ $category->name }}</h3>
-            <button type="submit" class="btn btn-primary edit"><i class="material-icons">autorenew</i></button>
-            <button type="submit" class="btn btn-primary"><i class="material-icons">
-                    <a href="/categories/delete/{{$category->id}}"> delete </a></i></button>
+            <button type="submit" class="btn btn-primary edit">
+                <i class="material-icons">autorenew</i>
+            </button>
+
+            <button type="submit" class="btn btn-primary">
+                <i class="material-icons">
+                    <a onclick="return confirm('Você tem certeza que quer deletar esta categoria?');"
+                       href="/categories/delete/{{$category->id}}">
+                        delete
+                    </a>
+                </i>
+            </button>
 
             <form class="show-form" method="post" action="/categories/{{$category->id}}">
                 {{csrf_field()}}
@@ -25,7 +34,9 @@
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" class="btn waves-effect white grey-text darken-text-2 edit">Editar</button>
+                    <button type="submit" class="btn waves-effect white grey-text darken-text-2 edit">
+                        Editar
+                    </button>
                 </div>
 
                 @include('layouts.errors')
