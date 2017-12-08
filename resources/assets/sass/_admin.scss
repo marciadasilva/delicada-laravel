@@ -15,7 +15,7 @@ $background_color: #383838;
 
   .admin-main{
     padding: 0 10px;
-    
+
     .show-form{
       display: none;
     }
@@ -47,6 +47,10 @@ $background_color: #383838;
     }
 
     .admin-main{
+      padding-bottom: 1em;
+      padding-left: 1em;
+      padding-right: 1em;
+
       .product-card{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;

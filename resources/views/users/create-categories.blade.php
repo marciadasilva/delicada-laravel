@@ -20,7 +20,7 @@
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Registrar</button>
+                    <button type="submit" class="btn waves-effect white grey-text darken-text-2">Registrar</button>
                 </div>
 
                 @include('layouts.errors')

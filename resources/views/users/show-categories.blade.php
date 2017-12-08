@@ -18,7 +18,7 @@
                 @endforeach
             </ul>
 
-            <button type="submit" class="btn btn-primary"><a href='/category/create'>
+            <button type="submit" class="btn waves-effect white grey-text darken-text-2"><a href='/category/create'>
                     <i class="material-icons">open_in_new</i> Nova Categoria</a></button>
         </div>
     </section>

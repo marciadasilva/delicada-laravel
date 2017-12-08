@@ -25,7 +25,7 @@
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary edit">Editar</button>
+                    <button type="submit" class="btn waves-effect white grey-text darken-text-2 edit">Editar</button>
                 </div>
 
                 @include('layouts.errors')
