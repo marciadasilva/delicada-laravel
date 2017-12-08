@@ -4,13 +4,13 @@
 
 @section('content')
 
-    <div class="user-grid">
+    <section class="admin-content">
 
-        <div class="user-sidebar">
+        <div class="admin-sidebar">
             @include('layouts.side-menu')
         </div>
 
-        <div class="main-info">
+        <div class="admin-main">
 
             <div class="product-card">
                 @foreach($products as $product)
@@ -39,6 +39,6 @@
                     <i class="material-icons">open_in_new</i> Novo Produto</a></button>
 
         </div>
-    </div>
+    </section>
 
 @endsection

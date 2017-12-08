@@ -4,13 +4,13 @@
 
 @section('content')
 
-    <div class="user-grid">
+    <section class="admin-content">
 
-        <div class="user-sidebar">
+        <div class="admin-sidebar">
             @include('layouts.side-menu')
         </div>
 
-        <div class="main-info">
+        <div class="admin-main">
             <ul class="collection">
                 <!-- quando clicar chamar outra tela só com a categoria selecionada -->
                 @foreach($categories as $category)
@@ -21,6 +21,6 @@
             <button type="submit" class="btn btn-primary"><a href='/category/create'>
                     <i class="material-icons">open_in_new</i> Nova Categoria</a></button>
         </div>
-    </div>
+    </section>
 
 @endsection

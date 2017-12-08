@@ -4,16 +4,16 @@
 
 @section('content')
 
-    <div class="user-grid">
+    <section class="admin-content">
 
-        <div class="user-sidebar">
+        <div class="admin-sidebar">
             @include('layouts.side-menu')
         </div>
 
-        <div class="main-info">
+        <div class="admin-main">
             <h4>Nome: {{ $user->name }}</h4>
             <h4>Data de Criação: {{ $user->created_at->toFormattedDateString() }}</h4>
         </div>
-    </div>
+    </section>
 
 @endsection

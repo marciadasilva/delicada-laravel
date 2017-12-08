@@ -56,7 +56,7 @@ class ProductsController extends Controller
 
     public function show(Product $product){
         // Return the single page with 1 category
-        return view('users.show-s-product', compact('product'));
+        return view('users.show-singl-product', compact('product'));
     }
 
     public function edit(Product $product){

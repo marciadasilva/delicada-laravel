@@ -4,13 +4,13 @@
 
 @section('content')
 
-    <div class="user-grid">
+    <section class="admin-content">
 
-        <div class="user-sidebar">
+        <div class="admin-sidebar">
             @include('layouts.side-menu')
         </div>
 
-        <div class="main-info">
+        <div class="admin-main">
             <ul class="collection">
                 <!-- quando clicar chamar outra tela só com a categoria selecionada -->
                 @foreach($users as $user)
@@ -18,6 +18,6 @@
                 @endforeach
             </ul>
         </div>
-    </div>
+    </section>
 
 @endsection

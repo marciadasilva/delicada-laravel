@@ -4,13 +4,13 @@
 
 @section('content')
 
-    <div class="user-grid">
+    <section class="admin-content">
 
-        <div class="user-sidebar">
+        <div class="admin-sidebar">
             @include('layouts.side-menu')
         </div>
 
-        <div class="main-info">
+        <div class="admin-main">
             <form method="post" action="/products" enctype="multipart/form-data">
 
                 @include('layouts.form-products')
@@ -24,6 +24,6 @@
 
             </form>
         </div>
-    </div>
+    </section>
 
 @endsection

@@ -11,27 +11,17 @@
 
     <title>@yield('title')</title>
 
-    <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="{{ asset('css/app.css')}}" type="text/css">
 </head>
 
-<!-- NAVBAR
-================================================== -->
-<body class="background-login">
+<body id="body-login">
 
-<div class="login-grid">
+    @yield('content')
 
-    <div class="form-login">
-        @yield('content')
-    </div>
-
-</div>
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 

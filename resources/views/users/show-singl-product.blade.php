@@ -4,13 +4,13 @@
 
 @section('content')
 
-    <div class="user-grid">
+    <section class="admin-content">
 
-        <div class="user-sidebar">
+        <div class="admin-sidebar">
             @include('layouts.side-menu')
         </div>
 
-        <div class="main-info">
+        <div class="admin-main">
             <h3>{{ $product->name }}</h3>
             <button type="submit" class="btn btn-primary edit"><i class="material-icons">autorenew</i></button>
             <button type="submit" class="btn btn-primary"><i class="material-icons">
@@ -32,6 +32,6 @@
 
             </form>
         </div>
-    </div>
+    </section>
 
 @endsection

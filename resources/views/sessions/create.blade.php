@@ -4,27 +4,31 @@
 
 @section('content')
 
-    <h3><i class="fa fa-lock"></i> Login </h3>
+    <section class="login">
 
-    <form action="/login" method="post">
-        {{csrf_field()}}
+        <div class="card-form">
+            <h3><i class="fa fa-lock"></i> Login </h3>
 
-        <div class="input-field">
-            <input id="email" type="email" name="email">
-            <label for="email">Digite seu email</label>
+            <form action="/login" method="post">
+                {{csrf_field()}}
+
+                <div class="input-field">
+                    <input id="email" type="email" name="email">
+                    <label for="email">Digite seu email</label>
+                </div>
+
+                <div class="input-field">
+                    <input id="password" type="password" name="password">
+                    <label for="password">Digite sua senha</label>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-info">Login</button>
+                </div>
+
+                @include('layouts.errors')
+
+            </form>
         </div>
-
-        <div class="input-field">
-            <input id="password" type="password" name="password">
-            <label for="password">Digite sua senha</label>
-        </div>
-
-        <div class="form-group">
-            <button type="submit" class="btn btn-info">Login</button>
-        </div>
-
-        @include('layouts.errors')
-
-    </form>
-
+    </section>
 @endsection
