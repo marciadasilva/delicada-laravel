@@ -1,4 +1,12 @@
+$(function(){
+    $(".button-collapse").sideNav();
+    $('.carousel.carousel-slider').carousel({fullWidth: true});
+    Materialize.updateTextFields();
+    $('select').material_select();
+});
+
 jQuery(document).ready(function($) {
+
     var url_atual = window.location.href;
 
     // Código para que apenas a página inicial fique sem a cor de fundo da barra de menu
@@ -19,7 +27,6 @@ jQuery(document).ready(function($) {
     $('.edit').click(function () {
         $('.show-form').toggle();
     });
-
 
     // Slider
     var sliderImages = document.querySelectorAll(".slide"),
@@ -55,7 +62,7 @@ jQuery(document).ready(function($) {
     }
 
     // Left arrow click
-    arrowLeft.addEventListener("click", function() {
+    arrowLeft.addEventListener("click", function () {
         if (current === 0) {
             current = sliderImages.length;
         }
@@ -63,7 +70,7 @@ jQuery(document).ready(function($) {
     });
 
     // Right arrow click
-    arrowRight.addEventListener("click", function() {
+    arrowRight.addEventListener("click", function () {
         if (current === sliderImages.length - 1) {
             current = -1;
         }
@@ -71,5 +78,4 @@ jQuery(document).ready(function($) {
     });
 
     startSlide();
-
 });

@@ -1,83 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="icon" href="{{ asset('favicon.ico')}}">
+@extends('layouts.login-template')
 
+@section('title', 'Entrar')
 
-<title>Login</title>
+@section('content')
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="{{ asset('css/carousel.css')}}" type="text/css">
-<link rel="stylesheet" href="{{ asset('css/delicada.css')}}" type="text/css">
-<link rel="stylesheet" href="{{ asset('css/login.css')}}" type="text/css">
+    <section class="login">
 
+        <div class="card-form">
+            <h3 class="cyan-text"><i class="fa fa-lock"></i> Login </h3>
 
-</head>
+            <form action="/login" method="post">
+                {{csrf_field()}}
 
-<body class="login-corpo">
-
-
-<aside>
-
-</aside>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6" style="margin-top: 17vh;">
-          <form class="borda-form fundo-form" action="" method="post">
-          <div>
-              <!--Header-->
-              <div class="text-center">
-                <h3 class="cor-roxo"><i class="fa fa-lock"></i> Login</h3>
-                  <hr>
-              </div>
-
-              <!--Body-->
-              <div class="form-group">
-                <i class="fa fa-envelope prefix grey-text cor-roxo"></i>
-                <label class="cor-roxo" for="email">E-mail</label>
-                <input type="email" id="email" class="form-control">
-
-              </div>
-
-              <div class="form-group">
-                <i class="fa fa-lock prefix cor-roxo"></i>
-                <label class="cor-roxo" for="pass">Senha</label>
-                <input type="password" id="pass" class="form-control">
-
-              </div>
-
-              <div class="text-center">
-                <button class="margin-bottom-15 btn btn-lg btn-info waves-effect waves-light">Entrar</button>
-              </div>
-            </div>
-
-              <!--Footer-->
-              <div class="modal-footer">
-                <div class="">
-                  <p class="cor-roxo">Não possui uma conta?
-                    <a href="#">Entre em contato</a>
-                  </p>
+                <div class="input-field">
+                    <input id="email" type="email" name="email">
+                    <label for="email">Digite seu email</label>
                 </div>
-              </div>
 
-          </div>
-      </div>
-    </form>
-      <div class="col-md-3"></div>
-    </div>
+                <div class="input-field">
+                    <input id="password" type="password" name="password">
+                    <label for="password">Digite sua senha</label>
+                </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-info">Login</button>
+                </div>
 
+                {{--@include('layouts.errors')--}}
 
-</body>
-</html>
+            </form>
+        </div>
+    </section>
+@endsection

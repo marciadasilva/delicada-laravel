@@ -1,60 +1,34 @@
 <?php
 
+// Site Routes
 
-Route::get('/', function () {
-    return view('site.index');
-})->name('home');
-
-Route::get('/produtos', function () {
-    $products = \App\Product::latest()->get();
-    return view('products.index', compact('products'));
-
-});
-
-// Register Routes
-Route::get('/register', 'RegistrationController@create');
-
-Route::post('/register', 'RegistrationController@store');
+Route::get('/', 'SiteController@index')->name('home');
 
 // Login Routes
-Route::get('/login', 'SessionsController@create')->name('login');
 
-Route::post('/login', 'SessionsController@store');
+Route::get('/register', 'LoginController@create');
+Route::post('/register', 'LoginController@store');
+Route::get('/login', 'LoginController@login')->name('login');
+Route::post('/login', 'LoginController@signIn');
+Route::get('/logout', 'LoginController@destroy'); //testar com POST
 
-Route::get('/logout', 'SessionsController@destroy'); //testar com POST
+// Admin Routes
+Route::get('/admin', 'AdminController@index')->name('admin');
+Route::get('/admin/help', 'AdminController@help')->name('help');
+Route::get('/admin/company', 'AdminController@company')->name('company');
 
-// Category Routes
+// Admin Category Routes
+Route::get('/admin/categories', 'AdminController@showCategories')->name('categories');
+Route::get('/admin/category/create', 'AdminController@createCategory');
+Route::post('/admin/category/create', 'AdminController@storeCategory');
+Route::get('/admin/category/edit/{category}', 'AdminController@updateCategory');
+Route::post('/admin/category/edit/{category}', 'AdminController@storeUpdateCategory');
+Route::get('/admin/category/delete/{category}', 'AdminController@deleteCategory');
 
-Route::get('/category/create', 'CategoriesController@create');
-
-Route::post('/categories', 'CategoriesController@store');
-
-Route::get('/categories', 'CategoriesController@index')->name('categories');
-
-Route::get('/categories/{category}', 'CategoriesController@show');
-
-Route::post('/categories/{category}', 'CategoriesController@update');
-
-Route::get('/categories/delete/{category}', 'CategoriesController@destroy');
-
-// Product Routes
-
-Route::get('/product/create', 'ProductsController@create');
-
-Route::get('/products', 'ProductsController@index')->name('products');
-
-Route::post('/products', 'ProductsController@store');
-
-Route::get('/products/{product}', 'ProductsController@show');
-
-Route::get('/products/{product}', 'ProductsController@edit');
-
-Route::post('/products/{product}', 'ProductsController@update');
-
-Route::get('/products/delete/{product}', 'ProductsController@destroy');
-
-// User Routes
-
-Route::get('/users', 'UserController@index')->name('users');
-
-Route::get('/users/{user}', 'UserController@show');
+// Admin Products Routes
+Route::get('/admin/products', 'AdminController@showProducts')->name('products');
+Route::get('/admin/product/create', 'AdminController@createProduct');
+Route::post('/admin/product/create', 'AdminController@storeProduct');
+Route::get('/admin/product/edit/{product}', 'AdminController@updateProduct');
+Route::post('/admin/product/edit/{product}', 'AdminController@storeUpdateProduct');
+Route::get('/admin/product/delete/{product}', 'AdminController@deleteProduct');
