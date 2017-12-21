@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Category;
 use App\Product;
+use App\Company;
+use App\Client;
 use Session;
 
 class AdminController extends Controller
@@ -25,7 +27,26 @@ class AdminController extends Controller
 
     public function company(){
         $admin = true;
-        return view('admin.company', compact('admin'));
+        $companies = Company::take(1)->latest()->get();
+        return view('admin.company', compact(['admin', 'companies']));
+    }
+
+    public function storeCompany(){
+
+        $this->validate(request(), [
+            'about' => 'required',
+            'facebook' => 'required',
+            'phone' => 'required',
+            'email' => 'required',
+            'address' => 'required',
+            'description' => 'required',
+        ]);
+
+        $dados = request()->all();
+
+        Company::create($dados);
+
+        return redirect()->route('company');
     }
 
     // Category
@@ -120,13 +141,18 @@ class AdminController extends Controller
     }
 
     public function deleteCategory(Category $category){
-        // remover
-        $imageToRemove = Category::where('id', $category->id)->first()->image;
-        unlink($imageToRemove);
-        Category::find($category->id)->delete();
-        return redirect()->route('categories');
-    }
 
+        if(Product::where('category_id', $category->id)->first()){
+            return redirect()->back()->withErrors(['Não é possível deletar
+            uma categoria que possui produtos cadastrados.', '']);
+        } else{
+            // remover
+            $imageToRemove = Category::where('id', $category->id)->first()->image;
+            unlink($imageToRemove);
+            Category::find($category->id)->delete();
+            return redirect()->route('categories');
+        }
+    }
 
     // Products
 
@@ -257,6 +283,80 @@ class AdminController extends Controller
         unlink($imageToRemove);
         Product::find($product->id)->delete();
         return redirect()->route('products');
+    }
+
+    // Clients
+
+    public function showClients(){
+        $admin = true;
+        $clients = Client::latest()->get();
+        return view('admin.show-clients', compact(['admin' , 'clients']));
+    }
+
+    public function createClient(){
+        $admin = true;
+        return view('admin.create-client', compact('admin'));
+    }
+
+    public function storeClient(){
+
+        Session::put('name-client', request('name'));
+        Session::put('cpf-client', request('cpf'));
+        Session::put('address-client', request('address'));
+        Session::put('phone-client', request('phone'));
+        Session::put('email-client', request('email'));
+        Session::put('workplace-client', request('workplace'));
+
+        $this->validate(request(), [
+            'name' => 'required',
+            'cpf' => 'required',
+            'phone' => 'required',
+        ]);
+
+        $dados = request()->all();
+
+        Client::create($dados);
+
+        return redirect()->route('clients');
+    }
+
+    public function updateClient(Client $client){
+        $admin = true;
+        return view('admin.edit-client', compact(['admin', 'client']));
+    }
+
+    public function storeUpdateCLient(Client $client){
+
+        Session::put('name-client-edit', request('name'));
+        Session::put('cpf-client-edit', request('cpf'));
+        Session::put('address-client-edit', request('address'));
+        Session::put('phone-client-edit', request('phone'));
+        Session::put('email-client-edit', request('email'));
+        Session::put('workplace-client-edit', request('workplace'));
+
+        $this->validate(request(), [
+            'name' => 'required',
+            'cpf' => 'required',
+            'phone' => 'required',
+        ]);
+
+        $dados = request()->all();
+
+        Client::where('id', $client->id)->update([
+            'name' => request('name'),
+            'cpf' => request('cpf'),
+            'address' => request('address'),
+            'phone' => request('phone'),
+            'email' => request('email'),
+            'workplace' => request('workplace')
+        ]);
+
+        return redirect()->route('clients');
+    }
+
+    public function deleteClient (Client $client){
+        Client::find($client->id)->delete();
+        return redirect()->route('clients');
     }
 
 }

@@ -27,8 +27,8 @@
                                 <p>Categoria: {{$product->category->name}}</p>
                                 <p>Tamanho: {{$product->size}}</p>
                                 <p>Cores: {{$product->color}}</p>
-                                <p>Preço Compra: {{$product->price_buy}}</p>
-                                <p>Preço Venda: {{$product->price_sell}}</p>
+                                <p>Compra: {{$product->price_buy}}</p>
+                                <p>Venda: {{$product->price_sell}}</p>
                                 <p>Estoque: {{$product->amount}}</p>
                             </div>
                         </div>

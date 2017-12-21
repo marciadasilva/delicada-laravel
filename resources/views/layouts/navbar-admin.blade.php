@@ -12,6 +12,7 @@
                     <li><a href="/admin/categories">Categorias</a></li>
                     <li><a href="/admin/products">Produtos</a></li>
                     <li><a href="/admin/company">Empresa</a></li>
+                    <li><a href="/admin/clients">Clientes</a></li>
                     <li><a href="/admin/help">Ajuda</a></li>
                     @if(Auth::check())
                         {{--<li><a href="/admin">{{Auth::user()->name}}</a></li>--}}
@@ -25,6 +26,7 @@
                     <li><a href="/admin/categories">Categorias</a></li>
                     <li><a href="/admin/products">Produtos</a></li>
                     <li><a href="/admin/company">Empresa</a></li>
+                    <li><a href="/admin/clients">Clientes</a></li>
                     <li><a href="/admin/help">Ajuda</a></li>
                     @if(Auth::check())
                         {{--<li><a href="/admin">{{Auth::user()->name}}</a></li>--}}

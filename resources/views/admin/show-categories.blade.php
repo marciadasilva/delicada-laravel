@@ -11,6 +11,13 @@
                 <a class="waves-effect waves-light btn-large"
                    href="/admin/category/create">Nova Categoria</a>
             </div>
+
+            @if($errors->any())
+                <div class="container error-message">
+                    <p class="center-align">{{$errors->first()}}</p>
+                </div>
+            @endif
+
             <table class="striped centered">
                 <thead>
                 <tr>

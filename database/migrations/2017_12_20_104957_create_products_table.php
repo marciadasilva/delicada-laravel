@@ -24,7 +24,7 @@ class CreateProductsTable extends Migration
             $table->string('color');
             $table->float('price_buy');
             $table->float('price_sell');
-            $table->decimal('amount');
+            $table->integer('amount');
             $table->timestamps();
         });
     }

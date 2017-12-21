@@ -3,6 +3,12 @@
 // Site Routes
 
 Route::get('/', 'SiteController@index')->name('home');
+Route::get('/contact', 'SiteController@contact')->name('contact');
+Route::post('/contact', 'SiteController@sendMessage');
+
+Route::get('/products', 'SiteController@products');
+Route::post('/products', 'SiteController@productsPost');
+Route::get('/products/{category}', 'SiteController@product');
 
 // Login Routes
 
@@ -16,6 +22,7 @@ Route::get('/logout', 'LoginController@destroy'); //testar com POST
 Route::get('/admin', 'AdminController@index')->name('admin');
 Route::get('/admin/help', 'AdminController@help')->name('help');
 Route::get('/admin/company', 'AdminController@company')->name('company');
+Route::post('/admin/company', 'AdminController@storeCompany');
 
 // Admin Category Routes
 Route::get('/admin/categories', 'AdminController@showCategories')->name('categories');
@@ -32,3 +39,10 @@ Route::post('/admin/product/create', 'AdminController@storeProduct');
 Route::get('/admin/product/edit/{product}', 'AdminController@updateProduct');
 Route::post('/admin/product/edit/{product}', 'AdminController@storeUpdateProduct');
 Route::get('/admin/product/delete/{product}', 'AdminController@deleteProduct');
+
+// Admin Clients Routes
+Route::get('/admin/clients', 'AdminController@showClients')->name('clients');
+Route::get('/admin/client/create', 'AdminController@createClient');
+Route::post('/admin/client/create', 'AdminController@storeClient');
+Route::get('/admin/client/edit/{client}', 'AdminController@updateClient');
+Route::post('/admin/client/edit/{client}', 'AdminController@storeUpdateClient');

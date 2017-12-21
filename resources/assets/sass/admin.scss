@@ -115,6 +115,15 @@ $main_color: #BA68C8;
       padding-bottom: 2em;
     }
   }
+
+  /* ##################  Show-Clients Page  ################### */
+
+  .create-client{
+
+    span{
+      color: red;
+    }
+  }
 }
 
 #imagem-edit{
@@ -139,10 +148,19 @@ $main_color: #BA68C8;
 /* ##################  Company Page  ################### */
 
 .company-info{
-  height: 100vh;
+  //height: 100vh;
+  padding-bottom: 2em;
 
   .first{
     padding-top: 5em;
+  }
+}
+
+.error-message{
+  background: $dark_red;
+  p{
+    padding: 1em;
+    color: white;
   }
 }
 
@@ -197,6 +215,19 @@ $main_color: #BA68C8;
         }
       }
     }
+
+    /* ##################  Show-Clients Page  ################### */
+
+    .show-cards{
+
+      .client-cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1em;
+        padding: 3em;
+      }
+    }
+
   }
 
   #imagem-edit{

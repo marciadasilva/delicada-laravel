@@ -38,16 +38,15 @@
 
     <section id="description-index">
         <h3>Delicada Mulher Moda Feminina</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Cum dolorem doloribus ex, porro quibusdam quisquam sit suscipit vel veritatis vero?
-            Aut consequatur consequuntur facilis omnis, sit tenetur!
-            Architecto at, autem consequuntur illum iste laboriosam maiores officia perferendis
-            perspiciatis qui, ratione, similique. Atque ea eos eum labore minima minus nam quam
-            quibusdam, quo! Adipisci consequuntur cum debitis dolor dolore ea, error eveniet
-            fuga hic illo magnam odio praesentium quam quasi ut vitae voluptates? Ab, consequatur
-            corporis cupiditate deserunt dolore doloribus earum, eligendi error iusto molestias
-            nihil nisi quam quis, sed sunt unde vero vitae voluptatem. Assumenda ex facere
-            mollitia nisi perspiciatis.</p>
+        <p>
+            @foreach($companies as $company)
+                @if(isset($company->description))
+                    {{$company->description}}
+                @else
+                    Descrição da empresa.
+                @endif
+            @endforeach
+        </p>
     </section>
 
     {{-- CATEGORY SECTION --}}
@@ -78,7 +77,7 @@
                     <p>{{ $category->description  }}</p>
                 </div>
                 <div class="card-action">
-                    <a href="/category/{{ $category->id}}">Ver mais</a>
+                    <a href="/products/{{ $category->id}}">Ver mais</a>
                 </div>
             </div>
         @endforeach

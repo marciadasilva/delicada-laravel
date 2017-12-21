@@ -1,0 +1,26 @@
+$background_color: #d2d2d2;
+
+.products{
+  background-color: white;
+
+  .grid-products{
+    padding-top: 4em;
+    .sidebar{
+      padding: 1em;
+      background-color: #fab0ff;
+    }
+  }
+
+}
+
+/* ###################################################### */
+/*                        Large screen                    */
+/* ###################################################### */
+
+@media(min-width:700px){
+
+  .grid-products{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+  }
+}

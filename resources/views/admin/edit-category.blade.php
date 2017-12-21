@@ -4,110 +4,82 @@
 
 @section('content')
 
-    <main class="admin-edit">
+    <main class="admin-create">
 
-        <section class="card-edit container">
-            <form class="container center"
+        <section class="card-create container-fluid">
+            <form class="container"
                   action="/admin/category/edit/{{$category->id}}"
                   method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
-
-                @if ($errors->any())
-
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="name"
-                                   name="name"
-                                   type="text"
-                                   class="validate"
-                                   @if($errors->first('name'))
-                                   value=" {{$errors->first('name')}}"
-                                   @else
-                                   value=" {{Session::get('name-category-edit')}}"
-                                   @endif
-                                   required>
-                            <label for="name">Nome da Categoria</label>
-                        </div>
-                    </div>
-
+                <div class="container center">
                     <div class="row">
                         <div class="input-field col s12">
                             <input
-                                    id="description"
-                                    name="description"
-                                    type="text"
-                                    class="validate"
-                                    @if($errors->first('description'))
-                                    value=" {{$errors->first('description')}}"
+                                id="name"
+                                name="name"
+                                type="text"
+                                required
+                                @if ($errors->any())
+                                    @if (Session::get('name-category-edit'))
+                                        value="{{Session::get('name-category-edit')}}"
                                     @else
-                                    value=" {{Session::get('description-category-edit')}}"
+                                        value="{{$category->name}}"
                                     @endif
-                                    required
-                            >
-                            <label for="name">Descrição da Categoria</label>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="input-field col s2">
-                            <img src="{{asset($category->image)}}">
-                        </div>
-                    </div>
-
-                    <div class="file-field input-field">
-                        <div class="btn">
-                            <span>Nova Imagem</span>
-                            <input type="file"
-                                   name="image"
-                                   id="image"
-                                   multiple>
-                        </div>
-                        <div class="file-path-wrapper">
-                            <input class="file-path validate"
-                                   type="text"
-                                   placeholder="Selecionar">
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col s12">
-                            @if($errors->first('image'))
-                                {{$errors->first('image')}}
-                            @endif
-                        </div>
-                    </div>
-
-                @else
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input
-                                    id="name"
-                                    name="name"
-                                    type="text"
+                                @else
                                     value="{{$category->name}}"
+                                @endif
                             >
-                            <label for="name">Nome da Categoria</label>
+                            <label for="name">Nome</label>
                         </div>
                     </div>
+
+                    @if ($errors->any())
+                        <div class="row">
+                            <div class="col s12">
+                                @if($errors->first('name'))
+                                    <span>{{$errors->first('name')}}</span>
+                                @endif
+                            </div>
+                        </div>
+                    @endif
 
                     <div class="row">
                         <div class="input-field col s12">
                             <input
-                                      type="text"
-                                      name="description"
-                                      id="description"
-                                      value="{{$category->description}}"
+                                    type="text"
+                                    name="description"
+                                    id="description"
+                                    required
+                                    @if ($errors->any())
+                                        @if (Session::get('description-category-edit'))
+                                            value="{{Session::get('description-category-edit')}}"
+                                        @else
+                                            value="{{$category->description}}"
+                                        @endif
+                                    @else
+                                        value="{{$category->description}}"
+                                    @endif
                             >
-                            <label for="name">Descrição da Categoria</label>
+                            <label for="description">Descrição</label>
                         </div>
                     </div>
+
+                    @if ($errors->any())
+                        <div class="row">
+                            <div class="col s12">
+                                @if($errors->first('description'))
+                                    <span>{{$errors->first('description')}}</span>
+                                @endif
+                            </div>
+                        </div>
+                    @endif
 
                     <div class="row valign-wrapper">
-                        <div class="input-field col m4">
+                        <div class="input-field col s5">
                             <img id="imagem-edit" src="{{asset($category->image)}}">
                         </div>
 
-                        <div class="col m8">
+                        <div class="col s7">
                             <div class="file-field input-field">
                                 <div class="btn">
                                     <span>Nova Imagem</span>
@@ -125,12 +97,18 @@
                         </div>
                     </div>
 
-                @endif
+                    <div class="row">
+                        <div class="col s12">
+                            @if($errors->first('image'))
+                                {{$errors->first('image')}}
+                            @endif
+                        </div>
+                    </div>
 
-                <br>
-                <button type="submit"
-                        class="waves-effect waves-light btn-large"> Editar Categoria
-                </button>
+                    <button type="submit"
+                            class="waves-effect waves-light btn-large"> Salvar
+                    </button>
+                </div>
             </form>
         </section>
     </main>
