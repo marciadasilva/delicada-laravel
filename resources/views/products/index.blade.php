@@ -50,6 +50,8 @@
                                 class="waves-effect waves-light btn"> Filtrar
                         </button>
                 </form>
+
+                <hr>
             </section>
 
             <section id="product-index">
