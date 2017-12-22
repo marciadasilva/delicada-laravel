@@ -36,27 +36,34 @@
                             <input name="all" type="checkbox" id="all" value="all"/>
                             <label for="all">Todas as Categorias</label>
                         </p>
+
                         @foreach($categories as $cat)
+                            <span style="display: none">{{$cont = 0}}</span>
+
                             @foreach($category_mult as $cm)
-                                @if($cm->id == $cat->id)
-                                    <p>
-                                        <input name="test[]" type="checkbox" id="{{$cat->name}}" value="{{$cat->id}}"
-                                               checked="checked" />
-                                        <label for="{{$cat->name}}">{{$cat->name}}</label>
-                                    </p>
+                                @if($cat->id == $cm->id)
+                                    <span style="display: none">{{$cont = 1}}</span>
                                     @break
-                                @else
-                                    <p>
-                                        <input name="test[]"
-                                               type="checkbox"
-                                               id="{{$cat->name}}"
-                                               value="{{$cat->id}}"/>
-                                        <label for="{{$cat->name}}">{{$cat->name}}</label>
-                                    </p>
-                                    {{--@break--}}
                                 @endif
                             @endforeach
+
+                            @if($cont == 1)
+                                <p>
+                                    <input name="test[]" type="checkbox" id="{{$cat->name}}" value="{{$cat->id}}"
+                                           checked="checked" />
+                                    <label for="{{$cat->name}}">{{$cat->name}}</label>
+                                </p>
+                            @else
+                                <p>
+                                    <input name="test[]"
+                                           type="checkbox"
+                                           id="{{$cat->name}}"
+                                           value="{{$cat->id}}"/>
+                                    <label for="{{$cat->name}}">{{$cat->name}}</label>
+                                </p>
+                            @endif
                         @endforeach
+
                     @else
                         <p>
                             <input name="all" type="checkbox" id="all" checked="checked" value="all" />

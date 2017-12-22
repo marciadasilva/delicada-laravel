@@ -77,47 +77,29 @@ class SiteController extends Controller
         if(isset($_POST['all'])){
             $products = Product::latest()->paginate($paginate);
             return view('products.index', compact(['products', 'companies', 'categories']));
-        } else{
+        } else if(isset($_POST['test'])){
+            $query = Product::latest();
+            $queryCategory = Category::latest();
 
-            switch(count($_POST['test'])){
-                case 1:
-                    $products = Product::where('category_id', '=', $_POST['test'][0])
-                        ->latest()
-                        ->paginate($paginate);
-                    $category_mult = Category::where('id', '=', $_POST['test'][0])->first();
-                    break;
-                case 2:
-                    $products = Product::where('category_id', '=', $_POST['test'][0])
-                        ->orWhere('category_id', '=', $_POST['test'][1])
-                        ->latest()
-                        ->paginate($paginate);
+            $query = $query->where('category_id','=', $_POST['test'][0]);
+            $queryCategory = $queryCategory->where('id','=', $_POST['test'][0]);
 
-                    $category_mult = Category::where('id', '=', $_POST['test'][0])
-                        ->orWhere('id', '=', $_POST['test'][1])
-                        ->get();
-                    break;
-                case 3:
-                    $products = Product::where('category_id', '=', $_POST['test'][0])
-                        ->orWhere('category_id', '=', $_POST['test'][1])
-                        ->orWhere('category_id', '=', $_POST['test'][2])
-                        ->latest()
-                        ->paginate($paginate);
-
-                    break;
-                case 4:
-                    $products = Product::where('category_id', '=', $_POST['test'][0])
-                        ->orWhere('category_id', '=', $_POST['test'][1])
-                        ->orWhere('category_id', '=', $_POST['test'][2])
-                        ->orWhere('category_id', '=', $_POST['test'][3])
-                        ->latest()
-                        ->paginate($paginate);
-                    break;
-                default:
-                    $products = Product::latest()->paginate($paginate);
-                    break;
+            for($i = 1; $i < count($_POST['test']); $i++){
+                $query = $query->orWhere('category_id','=', $_POST['test'][$i]);
+                $queryCategory = $queryCategory->orWhere('id','=', $_POST['test'][$i]);
             }
-            //$category = Category::where('id', '=', $_POST['test'])->first();
-            return view('products.index', compact(['products', 'category_mult', 'companies', 'categories']));
+
+            $products = $query->paginate($paginate);
+            $category_mult = $queryCategory->get();
+
+            return view('products.index',
+                compact([
+                    'products', 'category_mult', 'companies', 'categories'
+                ])
+            );
+        }else {
+            $products = Product::latest()->paginate($paginate);
+            return view('products.index', compact(['products', 'companies', 'categories']));
         }
     }
 }
