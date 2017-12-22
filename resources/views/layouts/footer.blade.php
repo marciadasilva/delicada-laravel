@@ -24,7 +24,7 @@
                             @if(isset($company->twitter) )
                                 href="{{$company->twitter}}"
                             @else
-                                href="https://www.facebook.com"
+                                href="https://www.twitter.com"
                             @endif
                         @endforeach>
                     <i class="fa fa-twitter margin-left-right"> </i>
@@ -65,7 +65,7 @@
                 <h6><a href="/categories">Categorias</a></h6>
                 <hr>
                 @foreach($categories as $category)
-                    <p><a href="/categories/{{$category->id}}">{{$category->name}}</a></p>
+                    <p><a href="/products/{{$category->id}}">{{$category->name}}</a></p>
                 @endforeach
             </div>
 

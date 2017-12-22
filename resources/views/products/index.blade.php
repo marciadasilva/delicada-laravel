@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Contato - Delicada Mulher')
+@section('title', 'Produtos - Delicada Mulher')
 
 @section('content')
 
@@ -30,6 +30,32 @@
                                     <label for="{{$cat->name}}">{{$cat->name}}</label>
                                 </p>
                             @endif
+                        @endforeach
+                    @elseif(isset($category_mult))
+                        <p>
+                            <input name="all" type="checkbox" id="all" value="all"/>
+                            <label for="all">Todas as Categorias</label>
+                        </p>
+                        @foreach($categories as $cat)
+                            @foreach($category_mult as $cm)
+                                @if($cm->id == $cat->id)
+                                    <p>
+                                        <input name="test[]" type="checkbox" id="{{$cat->name}}" value="{{$cat->id}}"
+                                               checked="checked" />
+                                        <label for="{{$cat->name}}">{{$cat->name}}</label>
+                                    </p>
+                                    @break
+                                @else
+                                    <p>
+                                        <input name="test[]"
+                                               type="checkbox"
+                                               id="{{$cat->name}}"
+                                               value="{{$cat->id}}"/>
+                                        <label for="{{$cat->name}}">{{$cat->name}}</label>
+                                    </p>
+                                    {{--@break--}}
+                                @endif
+                            @endforeach
                         @endforeach
                     @else
                         <p>

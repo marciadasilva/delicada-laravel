@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <main class="admin-table">
+    <main id="products">
 
         <section class="show-cards">
 
@@ -14,6 +14,21 @@
             </div>
 
             <section class="product-cards">
+                @if(sizeof($products) == 1)
+                <div class="products-1">
+                @elseif(sizeof($products) == 2)
+                <div class="products-2">
+                @elseif(sizeof($products) == 3)
+                <div class="products-3">
+                @elseif(sizeof($products)== 4 || (sizeof($products) % 4) == 0)
+                <div class="products-4">
+                @elseif(sizeof($products)== 5 || (sizeof($products) % 5) == 0)
+                <div class="products-5">
+                @elseif((sizeof($products) % 3) == 0)
+                <div class="products-6">
+                @else
+                <div class="products-4">
+                @endif
                 @foreach($products as $product)
                     <div class="card">
                         <div class="card-image">
