@@ -56,14 +56,16 @@ class SiteController extends Controller
     }
 
     public function products(){
-        $products = Product::latest()->paginate(6);
+        $paginate = 3;
+        $products = Product::latest()->paginate($paginate);
         $categories = Category::latest()->get();
         $companies = Company::take(1)->latest()->get();
         return view('products.index', compact(['products', 'companies', 'categories']));
     }
 
     public function product(Category $category){
-        $products = Product::where('category_id', '=', $category->id)->latest()->paginate(6);
+        $paginate = 3;
+        $products = Product::where('category_id', '=', $category->id)->latest()->paginate($paginate);
         $categories = Category::latest()->get();
         $companies = Company::take(1)->latest()->get();
         return view('products.index', compact(['products', 'category', 'companies', 'categories']));
@@ -72,7 +74,7 @@ class SiteController extends Controller
     public function productsPost(){
         $categories = Category::latest()->get();
         $companies = Company::take(1)->latest()->get();
-        $paginate = 6;
+        $paginate = 3;
 
         if(isset($_POST['all'])){
             $products = Product::latest()->paginate($paginate);

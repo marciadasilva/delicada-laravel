@@ -56,14 +56,12 @@
         <div class="category-1">
         @elseif(sizeof($categories) == 2)
         <div class="category-2">
-        @elseif(sizeof($categories) == 3)
+        @elseif(sizeof($categories) == 3 ||(sizeof($categories) % 3) == 0 )
         <div class="category-3">
         @elseif(sizeof($categories)== 4 || (sizeof($categories) % 4) == 0)
         <div class="category-4">
         @elseif(sizeof($categories)== 5 || (sizeof($categories) % 5) == 0)
         <div class="category-5">
-        @elseif((sizeof($categories) % 3) == 0)
-        <div class="category-6">
         @else
         <div class="category-4">
         @endif

@@ -89,19 +89,19 @@
 
             <section id="product-index">
                 @if(sizeof($products) == 1)
-                <div class="category-1">
+                <div class="products-1">
                 @elseif(sizeof($products) == 2)
-                <div class="category-2">
+                <div class="products-2">
                 @elseif(sizeof($products) == 3)
-                <div class="category-3">
+                <div class="products-3">
                 @elseif(sizeof($products)== 4 || (sizeof($products) % 4) == 0)
-                <div class="category-4">
+                <div class="products-4">
                 @elseif(sizeof($products)== 5 || (sizeof($products) % 5) == 0)
-                <div class="category-5">
+                <div class="products-5">
                 @elseif((sizeof($products) % 3) == 0)
-                <div class="category-6">
+                <div class="products-6">
                 @else
-                <div class="category-4">
+                <div class="products-4">
                 @endif
                     @foreach($products as $product)
                         <div class="card">
@@ -110,12 +110,24 @@
                                 <span class="card-title">{{ $product->name  }}</span>
                             </div>
                             <div class="card-content">
-                                <p>{{ $product->description  }}</p>
+                                <p>Descrição: {{ $product->description  }}</p>
+                                <p>Tamanho: {{ $product->size  }}</p>
+                                <p>Estoque: {{ $product->amount  }}</p>
+                            </div>
+                            <div class="card-action">
+                                <p>Preço: <strong>R$ {{number_format($product->price_sell, 2, ',', ' ')}}</strong>
+                                ou 3 x {{number_format($product->price_sell/3, 2, ',', ' ')}}</p>
                             </div>
                         </div>
                     @endforeach
                 </div>
+
+                <div>
+                    {{ $products->links() }}
+                </div>
             </section>
+
+
         </main>
     </div>
 

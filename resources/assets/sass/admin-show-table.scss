@@ -1,0 +1,108 @@
+$dark_gray: #383838;
+$dark_red: #a72830;
+$main_color: #BA68C8;
+
+.admin-table{
+
+  table{
+    color: $dark_gray;
+    text-align: center;
+    width: 100%;
+
+    td{
+      padding: 8px;
+    }
+
+    th{
+      padding: 1em;
+    }
+
+    tr{
+      width: 100%;
+
+      &:hover {
+        background-color: #ddd;
+      }
+
+      i{
+        color: $dark_gray;
+      }
+    }
+
+    img{
+      display: inline-block;
+      width: 4em;
+      height: 4em;
+    }
+
+    a{
+      padding: 1em;
+    }
+  }
+
+  a{
+    text-decoration: none;
+    color: #fff;
+  }
+
+  label{
+    color: $dark_gray;
+  }
+
+  .container{
+    a{
+      background: $dark_gray;
+      margin-top: 5em;
+      width: 100%;
+
+      &:hover{
+        background: $main_color;
+      }
+    }
+  }
+
+  ul{
+    color: $dark_gray;
+    margin: 0.5em 0 1em 0;
+    padding: 0;
+
+    li{
+      padding: 0.5em;
+      margin: 0.5em;
+      font-size: 1.5em;
+      list-style: none;
+      background-color: $dark_red;
+    }
+
+  }
+
+  section{
+
+    .container{
+      a{
+        width: 100%;
+      }
+    }
+
+    table{
+      width: 75%;
+      margin-left: auto;
+      margin-right: auto;
+
+      img{
+        width: 8em;
+        height: 8em;
+      }
+    }
+  }
+
+}
+
+
+/* ###################################################### */
+/*                        Large screen                    */
+/* ###################################################### */
+
+@media(min-width:700px){
+
+}

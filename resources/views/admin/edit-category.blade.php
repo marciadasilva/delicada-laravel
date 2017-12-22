@@ -4,9 +4,9 @@
 
 @section('content')
 
-    <main class="admin-create">
+    <main class="admin-edit">
 
-        <section class="card-create container-fluid">
+        <section class="card-edit container-fluid">
             <form class="container"
                   action="/admin/category/edit/{{$category->id}}"
                   method="post" enctype="multipart/form-data">

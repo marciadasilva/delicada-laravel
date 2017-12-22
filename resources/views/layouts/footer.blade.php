@@ -62,7 +62,7 @@
             </div>
 
             <div class="categories-list">
-                <h6><a href="/categories">Categorias</a></h6>
+                <h6><a href="/products">Categorias</a></h6>
                 <hr>
                 @foreach($categories as $category)
                     <p><a href="/products/{{$category->id}}">{{$category->name}}</a></p>

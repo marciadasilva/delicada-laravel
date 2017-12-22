@@ -1,3 +1,157 @@
+$dark_gray: #383838;
+$dark_red: #a72830;
+$main_color: #BA68C8;
+
 .row {
   margin-bottom: 0;
+}
+
+/* PAGINATION */
+
+.pagination{
+  list-style: none;
+  padding: 1em;
+  margin: 0;
+  color: #fff;
+  background: $dark_gray;
+  text-align: center;
+
+  li {
+    display:inline-block;
+    padding: 0 0.5em;
+  }
+
+  // Reset materialize color
+  li.active{
+    background-color: $main_color;
+  }
+
+  .active, .disabled{
+    color: black;
+    font-weight: 700;
+    font-size: 1.5em;
+  }
+
+  a{
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+// IMAGE ON EDITS
+
+#imagem-edit{
+  height: 8em;
+  width: 8em;
+}
+
+/* ###################################################### */
+/*                        Large screen                    */
+/* ###################################################### */
+
+@media(min-width:700px){
+
+  // IMAGE ON EDITS
+
+  #imagem-edit{
+    height: 12em;
+    width: 12em;
+  }
+
+  // SHOW PRODUCTS GRIDS
+
+  .products-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: " . card . ";
+
+    .card {
+      grid-area: card;
+    }
+  }
+
+  .products-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5em;
+    justify-items: center;
+    padding-top: 1em;
+
+    .card {
+      width: 50vh;
+    }
+  }
+
+  .products-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    justify-items: center;
+    padding-top: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+
+    > div .card-content .two-columns {
+      columns: 2;
+    }
+  }
+
+  .products-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 1em;
+    grid-gap: 1em;
+  }
+
+  .products-5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 0.5em;
+  }
+
+  .products-6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0.5em;
+  }
+
+  // SHOW CATEGORIES GRIDS
+
+  .category-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+            " . card . ";
+
+    .card{
+      grid-area: card;
+    }
+  }
+
+  .category-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5em;
+  }
+
+  .category-3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  .category-4{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0.5em;
+  }
+
+  .category-5{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 0.5em;
+  }
+
 }

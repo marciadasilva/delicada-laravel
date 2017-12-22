@@ -1,0 +1,62 @@
+$dark_gray: #383838;
+$dark_red: #a72830;
+$main_color: #BA68C8;
+
+#products{
+
+  .show-cards{
+    padding-left: 2em;
+    padding-right: 2em;
+
+    .container{
+      a{
+        background: $dark_gray;
+        margin-top: 5em;
+        width: 100%;
+
+        &:hover{
+          background: $main_color;
+        }
+      }
+    }
+
+    .product-cards > div{
+      span, p{
+        text-transform: capitalize;
+      }
+    }
+
+    .card {
+      .card-image{
+        img{
+          height: 40vh;
+        }
+        .card-content{
+          height: 40vh;
+        }
+        .card-action{
+          height: 20vh;
+        }
+      }
+    }
+  }
+}
+
+/* ###################################################### */
+/*                        Large screen                    */
+/* ###################################################### */
+
+@media(min-width:700px){
+
+  #clients{
+    .show-cards{
+
+      .client-cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1em;
+        padding: 3em;
+      }
+    }
+  }
+}

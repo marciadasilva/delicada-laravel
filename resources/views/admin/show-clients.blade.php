@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <main class="admin-table">
+    <main id="clients">
 
         <section class="show-cards">
 

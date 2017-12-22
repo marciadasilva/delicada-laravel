@@ -1,0 +1,24 @@
+.admin-create{
+
+  .card-create{
+    form{
+      padding-top: 5em;
+      padding-bottom: 2em;
+    }
+  }
+
+  .create-client{
+
+    span{
+      color: red;
+    }
+  }
+}
+
+/* ###################################################### */
+/*                        Large screen                    */
+/* ###################################################### */
+
+@media(min-width:700px){
+
+}

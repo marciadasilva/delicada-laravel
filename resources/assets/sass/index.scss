@@ -164,6 +164,8 @@ $background_color: #383838;
 
   #description-index{
     text-align: center;
+    padding-bottom: 2em;
+    padding-top: 2em;
 
     p{
       font-size: 1.3em;
@@ -182,47 +184,6 @@ $background_color: #383838;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-    }
-
-    .category-1{
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-areas:
-              " . card . ";
-
-      .card{
-        grid-area: card;
-      }
-    }
-
-    .category-2{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 0.5em;
-    }
-
-    .category-3{
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 0.5em;
-    }
-
-    .category-4{
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-gap: 0.5em;
-    }
-
-    .category-5{
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-      grid-gap: 0.5em;
-    }
-
-    .category-6{
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 0.5em;
     }
   }
 
