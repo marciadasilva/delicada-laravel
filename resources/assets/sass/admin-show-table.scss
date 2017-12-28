@@ -4,6 +4,8 @@ $main_color: #BA68C8;
 
 .admin-table{
 
+  min-height: 100vh;
+
   table{
     color: $dark_gray;
     text-align: center;

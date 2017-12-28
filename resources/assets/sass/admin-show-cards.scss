@@ -2,11 +2,13 @@ $dark_gray: #383838;
 $dark_red: #a72830;
 $main_color: #BA68C8;
 
-#products{
+#products, #clients{
 
   .show-cards{
     padding-left: 2em;
     padding-right: 2em;
+
+    min-height: 100vh;
 
     .container{
       a{
