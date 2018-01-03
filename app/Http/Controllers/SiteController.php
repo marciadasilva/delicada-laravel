@@ -208,6 +208,9 @@ class SiteController extends Controller
         // Estas próximas partes são realizadas para somente montar graficamente o checkbox
         // de preço e tamanho
 
+
+        // highest/4 cada um deles vira
+
         // Prices checkbox
         $highest = Product::max('price_sell');  // busca no banco o maior preço
         $prices = collect();                    // cria uma coleção vazia
